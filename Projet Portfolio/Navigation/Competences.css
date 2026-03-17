@@ -1,0 +1,488 @@
+/* Base par defaut */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth; /* Transforme le saut brutal en glissement élégant */
+}
+
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Courier New', 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+    margin: 0;
+    scroll-snap-type: y mandatory; /* "y" pour vertical, "mandatory" pour forcer l'arrêt sur une page */
+    overflow-y: scroll;           /* Indispensable pour que l'aimant fonctionne */
+    height: 100vh;
+}
+
+.navigation{
+    position: fixed;            /* Reste fixé en haut pendant le scroll */
+    top: 0;                     /* Aligné tout en haut */
+    width: 100%;                /* Prend toute la largeur de l'écran */
+    height: 100px;               /* Hauteur fixe pour la barre */
+    display: flex;              /* Active Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Logo à gauche, Menu à droite */
+    padding: 0 50px;            /* Espace à gauche et à droite du contenu */
+    z-index: 1000;              /* Passe au-dessus de tout le reste */
+    backdrop-filter: blur(10px);          /* flou derrière */
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+   
+}
+
+.navigation:hover{
+    background-color:#bbafaf;
+    box-shadow: 0 10px 20px; /* Ombre légère sous la barre (effet de relief) */
+    transition: 0.5s;
+}
+
+
+.navigation ul {
+    display: flex;           /* Aligne les liens horizontalement */
+    flex-direction: row;     /* Force le sens "ligne" */
+    align-items: center;     /* Centre verticalement les textes */
+    list-style: none;        /* Enlève les points si c'est une liste */
+    margin-right: 50px;
+}
+
+.navigation li {
+padding-right: 20px;
+margin-left: 5px;
+ margin-right: 5px;
+    
+
+
+}
+
+
+.identity{
+    display: flex;          /* Aligne le texte et le point de statut */
+    align-items: center;    /* Centre verticalement */
+    justify-content: left;
+}
+
+.NomStatus{
+    
+}
+
+.Status{
+    width: 10px;            /* Largeur du point */
+    height: 10px;           /* Hauteur du point */
+    background-color: #00ff41; /* Couleur vert Matrix */
+    border-radius: 50%;     /* Transforme le carré en cercle parfait */
+    box-shadow: 0 0 8px #00ff41; /* Donne un effet de lumière qui brille */
+}
+
+
+.menu-item{
+    font-size:2cap;
+}
+
+
+.menu-item li {
+    position: relative; /* Indispensable pour que le remplissage reste dans la boîte */
+    padding: 10px 10px;
+    border: 1px solid transparent; /* Prépare la bordure pour le hover */
+    overflow: hidden;   /* Coupe tout ce qui dépasse (le remplissage) */
+    z-index: 1;         /* Crée un contexte d'empilage */
+    transition: 0.3s;
+}
+
+/* On crée la couche de remplissage avec ::before */
+.menu-item li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;           /* Départ à 0 (vide) */
+    height: 100%;
+    background-color: #00ff41; /* La couleur de remplissage (Vert Matrix) */
+    z-index: -1;        /* Se place DERRIÈRE le texte */
+    transition: width 0.4s ease-in-out; /* Animation de la largeur */
+}
+
+/* L'EFFET AU SURVOL */
+
+/* 1. Le rectangle se remplit */
+.menu-item li:hover::before {
+    width: 100%;        /* Le rectangle devient plein */
+}
+
+/* 2. Le texte change de couleur pour rester lisible sur le vert */
+.menu-item li:hover a, 
+.menu-item li:hover p {
+    color: #000 !important; /* Devient noir pour trancher avec le vert */
+    text-shadow: none;
+}
+
+/* 3. Style optionnel pour le texte par défaut */
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+    z-index: 2;
+}
+
+.menu-item p {
+    font-size: small;
+    text-align: right;
+
+}
+
+.menu-item li a:hover::after {
+    background-color: #006eff;
+    transition: 0.2s;
+}
+
+.menu-item li:hover{
+    color: #00ff41;         /* Le lien devient vert néon */
+    text-shadow: 0 0 5px #00ff41; /* Petite lueur au survol */
+}
+
+
+
+/* 1. Le conteneur qui gère la position */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 200px;
+    z-index: 1001; /* Pour passer au-dessus de la nav */
+}
+
+/* 2. Le bouton visible (FR) */
+.lang-selected {
+    background-color: #b7eb50; /* Le vert pomme/jaune de ton image */
+    color: #1a1a1a;            /* Texte sombre pour le contraste */
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    /* L'effet penché style Terminal/Cyber */
+    transform: skew(-15deg); 
+    border-radius: 4px;
+}
+
+/* On remet le texte et l'image droit à l'intérieur du bloc penché */
+.lang-selected img, 
+.lang-selected span, 
+.lang-selected i {
+    transform: skew(15deg); 
+}
+
+.lang-selected img {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+/* 3. La liste déroulante (cachée par défaut) */
+.lang-list {
+    display: block; /* On change display pour opacity pour permettre l'animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: skew(-15deg) translateY(-10px); /* Part d'un peu plus haut */
+    transition: all 0.3s ease-in-out;
+    
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #0a0a0a;
+    border: 1px solid #b7eb50;
+    list-style: none;
+    padding: 5px 0;
+    width: 100%;
+    min-width: 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.lang-list li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transform: skew(15deg); /* Redresse le texte */
+    transition: 0.2s;
+}
+
+.lang-list li a img {
+    width: 20px;
+}
+
+/* 4. LES INTERACTIONS (Hover) */
+
+/* Affiche la liste quand on survole le parent */
+.lang-dropdown:hover .lang-list {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: skew(-15deg) translateY(0);
+}
+
+/* Change la couleur au survol de l'option EN */
+.lang-list li:hover {
+    background-color: #b7eb50;
+    color: #000;
+}
+
+/* Petit effet de brillance sur le bouton principal au survol */
+.lang-selected:hover {
+    box-shadow: 0 0 10px #b7eb50;
+}
+
+main{
+    width: 100%;
+    /* On enlève justify-content: center ici pour ne pas écraser les sections */
+    display: block;
+}
+
+
+
+section{
+    height: 100vh;           /* Chaque section prend 100% de la hauteur de l'écran */
+    width: 100%;
+    display: flex;           /* Flexbox pour chaque page individuellement */
+    flex-direction: column;  /* Aligne le contenu du haut vers le bas */
+    justify-content: space-between; /* Pousse la flèche tout en bas et le texte au milieu */
+    align-items: center;     /* Centre horizontalement */
+    text-align: center;
+    padding-top: 100px;      /* Espace pour ton menu fixe (ajuste selon ton header) */
+    padding-bottom: 20px;    /* Espace pour que la flèche ne touche pas le bord */
+    box-sizing: border-box;  /* Important pour que le padding ne casse pas les 100vh */
+    scroll-snap-align: start;    /* Chaque section se cale pile au bord de l'écran */
+    scroll-snap-align: start;    /* La section se "colle" au haut de l'écran */
+    scroll-snap-stop: always;    /* Empêche de sauter 3 pages d'un coup */
+    /* Remplace 100px par la hauteur réelle de ta barre de navigation */
+    scroll-margin-top: 100px;
+    padding-top: 100px; /* La hauteur de ton header */
+    box-sizing: border-box; /* Indispensable pour que le padding soit INCLUS dans les 100vh */
+}
+
+
+
+
+
+
+.projets-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #050505;
+}
+
+.accordion {
+    display: flex;
+    width: 90%;
+    height: 60vh;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tab {
+    flex: 1; /* Taille égale pour toutes les colonnes au départ */
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #333;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transition fluide */
+    cursor: pointer;
+    filter: grayscale(100%); /* Look hacker : noir et blanc par défaut */
+}
+
+/* L'EFFET AU SURVOL */
+.tab:hover {
+    flex: 4; /* La colonne s'agrandit */
+    filter: grayscale(0%); /* La couleur revient */
+    border-color: #00ff41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* LE CONTENU (Texte et Lien) */
+.tab .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    opacity: 0; /* Caché par défaut */
+    transform: translateY(20px);
+    transition: 0.4s 0.2s; /* Petit délai pour attendre que la colonne s'ouvre */
+}
+
+.tab:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab h3 {
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.btn-projets {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.btn-projets:hover {
+    background: #00ff41;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills-section {
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Grille principale à 3 colonnes */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 95%;
+    max-width: 1300px; /* On élargit pour occuper l'écran */
+    margin: 50px auto;
+}
+
+/* Chaque colonne de domaine */
+.skill-category h3 {
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Le style des petites boîtes d'outils */
+.skill-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid #222;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-box:hover {
+    border-color: #00ff41;
+    background: rgba(0, 255, 65, 0.05);
+    transform: translateX(5px); /* Petit décalage au survol */
+}
+
+.skill-box span {
+    color: #eee;
+    font-family: 'Courier New', monospace;
+}
+
+.stars {
+    color: #00ff41; /* Étoiles en vert Matrix */
+    letter-spacing: 2px;
+}
+
+/* Responsive : 1 seule colonne sur mobile */
+@media (max-width: 850px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-skill {
+    font-size: 1.4rem;
+    color: #fff;
+    width: 25px; /* Largeur fixe pour que tout soit aligné */
+    text-align: center;
+}
+
+.stars {
+    color: #00ff41;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+/* --- COMMENT COMBLER LE VIDE EN BAS --- */
+.skills-footer {
+    margin-top: 50px;
+    width: 95%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.legend-box {
+    border-left: 3px solid #00ff41;
+    background: rgba(0, 255, 65, 0.05);
+    padding: 20px;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+}
+
+.legend-box p {
+    margin: 5px 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.legend-box code {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+
+footer{
+     background-color: #ffffff;
+  text-align: center;
+  color: #000000;
+}
+
