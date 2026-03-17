@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Accueil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title> Accueil | Portfolio </title>
+</head>
+<body>
+
+    <header>
+        <nav class="navigation">
+            <div class="identity">
+                <a href="#accueil">
+                    <img src="Image_illustration/1.jpg" alt="PhotoProfile" class="pp">
+                </a> 
+            </div>
+            
+            <ul class="menu-item">
+                <li><p>0001</p><a href="#accueil">~/Accueil</a></li>
+                <li><p>0010</p><a href="#a-propos">~/A-propos</a></li>
+                <li><p>0011</p><a href="#Competences">~/Compétences</a></li>
+                <li><p>0100</p><a href="#Projets">~/Projets</a></li>
+                <li><p>0101</p><a href="#Contact">~/Contact</a></li>
+
+                <div class="lang-dropdown">
+                    <div class="lang-selected">
+                        <img src="https://media.cdnws.com/_i/4335/290/359/92/drapeau-france-2.png" alt="FR">
+                        <span>FR</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="lang-list">
+                        <li>
+                            <a href="#">
+                                <img src="https://www.larousse.fr/encyclopedie/data/images/1009498-Drapeau_du_Royaume-Uni_de_Grande-Bretagne_et_dIrlande_du_Nord.jpg" alt="EN">
+                                <span>EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><img src="https://images.icon-icons.com/3915/PNG/512/tryhackme_logo_icon_249349.png" alt="THM" class="tryhack"></a></li>
+            <li><a href="#"><img src="https://www.root-me.org/IMG/logo/siteon0.svg" alt="RM" class="rootme"></a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="accueil" class="titre">
+
+            <div class="présentation">
+                <p class="bonjour">⚡ Bonjour je suis</p>
+                <h1 class="NomPrenom">Anonyme Hacker</h1>
+                <p class="miniskill">hacker éthique | administrateur système réseau | devOps</p>
+            </div>
+
+            <div class="fleche">
+                <a href="#a-propos" class="btn-flech-down">
+                    <code>[ root@anonyme:~# cd a-propos ]</code>
+                </a>
+            </div>
+        </section>
+
+        <section id="a-propos" class="about-me">
+            <div class="fleche">
+                <a href="#accueil" class="btn-fleche-up">
+                    <code>[ root@anonyme:~# cd accueil ]</code>
+                </a>
+            </div>
+
+            <h2 class="h2"> À Propos </h2>
+            
+            <div class="expertise-grid">
+    <div class="expertise-card">
+        <div class="card-header">
+            <i class="fa-solid fa-code icon-software"></i>
+            <h3>Software<br>Development</h3>
+        </div>
+        <div class="card-body">
+            <span class="html-tag"><h3></span>
+            <p>Expert en scripting Python et Bash pour l'automatisation de tâches de sécurité et le développement d'outils réseaux.</p>
+            <span class="html-tag"></h3></span>
+        </div>
+        
+    </div>
+
+    <div class="expertise-card">
+        <div class="card-header">
+            <i class="fa-solid fa-microchip icon-system"></i>
+            <h3>System &<br>Network Admin</h3>
+        </div>
+        <div class="card-body">
+            <span class="html-tag"><h3></span>
+            <p>Gestion d'infrastructures Linux/Windows, durcissement système et configuration de routeurs/firewalls.</p>
+            <span class="html-tag"></h3></span>
+        </div>
+    </div>
+
+    <div class="expertise-card">
+        <div class="card-header">
+            <i class="fa-solid fa-user-secret icon-hack"></i>
+            <h3>Ethical<br>Hacking</h3>
+        </div>
+        <div class="card-body">
+            <span class="html-tag"><h3></span>
+            <p>Tests d'intrusion (OWASP), analyse de vulnérabilités et audit de configuration pour sécuriser le SI.</p>
+            <span class="html-tag"></h3></span>
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026, Tous Droits Réservés © • Anonyme Hacker</p>
+    </footer>
+    
+</body>
+</html>
