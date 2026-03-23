@@ -345,7 +345,7 @@ section{
     justify-items: center;
     background-color: #0a0a0a;
     background-size:cover ;
-    background:url("Projet Portfolio/Navigation/doc/v1.mp4") ;
+    background:url("Navigation/doc/v1.mp4") ;
 }
 
 .video-bg {
@@ -465,7 +465,7 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
-    background-image:url("Projet Portfolio/Navigation/doc/cc2.webp");
+    background-image:url("Navigation/doc/cc2.webp");
     background-size: cover;
 }
 
