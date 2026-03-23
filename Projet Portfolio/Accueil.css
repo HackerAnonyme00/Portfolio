@@ -39,8 +39,8 @@ body{
 }
 
 .navigation:hover{
-    background-color:#bbafaf;
-    box-shadow: 0 10px 20px; /* Ombre légère sous la barre (effet de relief) */
+    background-color:#00000086;
+    box-shadow: 0 5px 10px rgb(73, 204, 73) ; /* Ombre légère sous la barre (effet de relief) */
     transition: 0.5s;
 }
 
@@ -69,7 +69,12 @@ margin-left: 5px;
     justify-content: left;
 }
 
-.NomStatus{
+.pp{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid white;
+    flex-direction: row;
     
 }
 
@@ -84,68 +89,62 @@ margin-left: 5px;
 
 .menu-item{
     font-size:2cap;
+     
 }
 
 
+
+
+/* --- RESET DES LIENS --- */
+.menu-item a {
+    text-decoration: none; /* Enlève le soulignement */
+    color: white;          
+    
+}
+
+/* --- LE MENU ITEM --- */
 .menu-item li {
-    position: relative; /* Indispensable pour que le remplissage reste dans la boîte */
-    padding: 10px 10px;
-    border: 1px solid transparent; /* Prépare la bordure pour le hover */
-    overflow: hidden;   /* Coupe tout ce qui dépasse (le remplissage) */
-    z-index: 1;         /* Crée un contexte d'empilage */
-    transition: 0.3s;
+    position: relative; 
+    padding: 10px 15px;
+    border: 1px solid transparent; 
+    overflow: hidden;   
+    z-index: 1; 
+    list-style: none; 
 }
 
-/* On crée la couche de remplissage avec ::before */
-.menu-item li::before {
+/* --- L'EFFET DE REMPLISSAGE (HAUT -> BAS) --- */
+.menu-item li a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;           /* Départ à 0 (vide) */
-    height: 100%;
-    background-color: #00ff41; /* La couleur de remplissage (Vert Matrix) */
-    z-index: -1;        /* Se place DERRIÈRE le texte */
-    transition: width 0.4s ease-in-out; /* Animation de la largeur */
+    width: 100%;        /* Largeur pleine dès le départ */
+    height: 0;          /* DÉPART : Hauteur à 0 pour l'effet Haut -> Bas */
+    background-color: #1be74ea4; 
+    z-index: -1;        
+    transition: height 0.2s ease-in-out; /* Animation sur la HAUTEUR maintenant */
 }
 
-/* L'EFFET AU SURVOL */
+/* --- L'EFFET AU SURVOL --- */
 
-/* 1. Le rectangle se remplit */
-.menu-item li:hover::before {
-    width: 100%;        /* Le rectangle devient plein */
+/* 1. Le rideau descend */
+.menu-item li a:hover::before {
+    height: 100%;       /* ARRIVÉE : La hauteur remplit toute la case */
 }
 
-/* 2. Le texte change de couleur pour rester lisible sur le vert */
-.menu-item li:hover a, 
-.menu-item li:hover p {
-    color: #000 !important; /* Devient noir pour trancher avec le vert */
-    text-shadow: none;
-}
 
-/* 3. Style optionnel pour le texte par défaut */
-.menu-item a {
-    text-decoration: none;
-    color: inherit;
-    z-index: 2;
-}
-
-.menu-item p {
-    font-size: small;
-    text-align: right;
-
-}
-
-.menu-item li a:hover::after {
-    background-color: #006eff;
+.menu-item li:hover a, .menu-item li:hover p {
+    color: #000; 
     transition: 0.2s;
 }
 
-.menu-item li:hover{
-    color: #00ff41;         /* Le lien devient vert néon */
-    text-shadow: 0 0 5px #00ff41; /* Petite lueur au survol */
-}
 
+.menu-item p {
+    color: white; 
+    font-size: 0.7rem;
+    text-align: right;
+    margin: 0;
+}
 
 
 /* 1. Le conteneur qui gère la position */
@@ -159,7 +158,7 @@ margin-left: 5px;
 
 /* 2. Le bouton visible (FR) */
 .lang-selected {
-    background-color: #b7eb50; /* Le vert pomme/jaune de ton image */
+    background-color: #50eb65; /* Le vert pomme/jaune de ton image */
     color: #1a1a1a;            /* Texte sombre pour le contraste */
     padding: 5px 12px;
     display: flex;
@@ -174,9 +173,7 @@ margin-left: 5px;
 }
 
 /* On remet le texte et l'image droit à l'intérieur du bloc penché */
-.lang-selected img, 
-.lang-selected span, 
-.lang-selected i {
+.lang-selected img, .lang-selected span, .lang-selected i {
     transform: skew(15deg); 
 }
 
@@ -198,7 +195,7 @@ margin-left: 5px;
     top: 110%;
     left: 0;
     background-color: #0a0a0a;
-    border: 1px solid #b7eb50;
+    border: 1px solid #6aeb50;
     list-style: none;
     padding: 5px 0;
     width: 100%;
@@ -234,7 +231,7 @@ margin-left: 5px;
 
 /* Change la couleur au survol de l'option EN */
 .lang-list li:hover {
-    background-color: #b7eb50;
+    background-color: #55eb50;
     color: #000;
 }
 
@@ -346,7 +343,34 @@ section{
 .titre{ 
     justify-content: center;
     justify-items: center;
-    background-color: #0a0a0a; /* Fond de la page 1 */
+    background-color: #0a0a0a;
+    background-size:cover ;
+    background:url("Navigation/doc/v1.mp4") ;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La vidéo remplit tout l'espace comme un tapis */
+    z-index: -1;       /* Elle passe DERRIÈRE tout le reste */
+    opacity: 1;      /* Optionnel : pour que le texte soit plus lisible */
+}
+
+
+
+.ppcentre{
+    border: 20%;
+    width:600px ;
+    position: absolute;  /* Sort l'image du flux : elle "flotte" */
+    /* GESTION DE LA POSITION (Ajuste ces valeurs à ta guise) */
+    top: 100%;           /* Distance depuis le haut */
+    left: 77%;          /* On le met au centre horizontal */
+    /* GESTION DU RETRAIT */
+    z-index: 1;         /* Met l'image derrière le texte (si le texte est à 2 ou plus) */
+    opacity: 1;       /* Rend l'image un peu transparente pour l'effet "retrait/fond" */
 }
 
 .présentation {
@@ -355,6 +379,7 @@ section{
     flex-direction: column;
     justify-content: center; /* Centre le texte verticalement dans cet espace */
     align-items: start;
+    z-index: 2;
 }
 
 .bonjour {
@@ -365,7 +390,7 @@ section{
     color: #00ff41;
     padding: 5px 10px;
     text-transform: uppercase;
-    background: rgba(0, 255, 65, 0.1); /* Léger fond vert transparent */
+    background: rgb(0, 0, 0); /* Léger fond vert transparent */
     clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* Effet biseauté optionnel */
 }
 
@@ -377,15 +402,15 @@ section{
 .NomPrenom {
   font-size: clamp(3rem, 10vw, 7rem); /* S'adapte à l'écran, évite de couper */
     color: #00ff41;
-    text-shadow: 0 0 15px #00ff41;
+    text-shadow: 0 0 15px #000000;
     margin: 10px 0;
     white-space: nowrap;
 }
 
 
 .miniskill{
-    font-size: 1.2rem;        /* Taille plus petite que le nom */
-    color: #888;              /* Gris plus discret */
+    font-size: 1.3rem;        /* Taille plus petite que le nom */
+    color: #ffffff;              /* Gris plus discret */
     margin-bottom: 30px;      /* Espace avant le bouton */
     font-style: italic;       /* Met le texte en italique */
     display: block;
@@ -397,6 +422,7 @@ section{
 
 .fleche {
    padding-bottom: 30px; /* Colle la flèche en bas de l'écran */
+   
 }
 
 
@@ -404,7 +430,11 @@ section{
 .btn-fleche-up, .btn-flech-down{
     text-decoration: none;
     color: #00ff41;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    padding: 10px;
+    border: white 2px solid;
+    background-color: rgba(27, 22, 22, 0.589)
+    
     
 }
 
@@ -412,6 +442,7 @@ section{
 .btn-fleche-up:hover, .btn-flech-down:hover {
     text-shadow: 0 0 10px #00ff41;
     transform: scale(1.05);
+    transition: height 0.4s ;
 }
 
 .fleche code {
@@ -428,19 +459,21 @@ section{
 
 /* --- SECTION A PROPOS (Global) --- */
 .about-me {
-    background-color: #443b3b;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
+    background-image:url("Navigation/doc/cc2.webp");
+    background-size: cover;
 }
 
 .h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #fff;
     margin-bottom: 50px;
-    font-family: Arial, sans-serif; /* Pour un look plus moderne sur le titre */
+    font-family: Arial; /* Pour un look plus moderne sur le titre */
 }
 
 /* --- LE GRID (Le cadre blanc de l'image) --- */
@@ -448,27 +481,24 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
     border: 1px solid #444; /* Bordure grise fine */
-    width: 90%;
-    max-width: 1200px;
-    background-color: transparent;
-    margin-bottom:250px;
-
-
+    width: 100%;
+    max-width: 1500px;
+    margin-bottom:260px;
 }
 
 /* --- LES CARTES INDIVIDUELLES --- */
 .expertise-card {
-    padding: 50px 30px;
+    padding: 30px 30px;
     border-right: 1px solid #444; /* Ligne verticale entre les cartes */
-    transition: background 0.3s ease;
+    margin: 20px;
+    background-color:rgba(69, 128, 61, 0.678)
 }
 
-.expertise-card:last-child {
-    border-right: none; /* Pas de ligne à droite de la dernière carte */
-}
 
 .expertise-card:hover {
-    background: rgba(255, 255, 255, 0.02); /* Effet de survol discret */
+    background: rgb(0, 0, 0); /* Effet de survol discret */
+    transition: 0.3s ease;
+    box-shadow: 10px white;
 }
 
 /* --- ICONS ET TITRES --- */
@@ -488,7 +518,7 @@ section{
     color: #fff;
     font-size: 1.5rem;
     line-height: 1.1;
-    text-align: left;
+    text-align: center;
 }
 
 /* Soulignement de couleur sous le titre (comme ton image) */
@@ -498,7 +528,7 @@ section{
 
 /* --- TEXTE ET TAGS HTML --- */
 .card-body {
-    text-align: left;
+    text-align:justify;
     border-left: 1px solid #444; /* La petite ligne verticale à gauche du texte */
     padding-left: 20px;
     margin-top: 20px;
@@ -512,10 +542,10 @@ section{
 }
 
 .card-body p {
-    color: #bbb;
+    color: #ffffff;
     font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 
