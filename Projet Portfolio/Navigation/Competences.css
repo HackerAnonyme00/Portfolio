@@ -39,8 +39,8 @@ body{
 }
 
 .navigation:hover{
-    background-color:#bbafaf;
-    box-shadow: 0 10px 20px; /* Ombre légère sous la barre (effet de relief) */
+    background-color:#00000086;
+    box-shadow: 0 5px 10px rgb(73, 204, 73) ; /* Ombre légère sous la barre (effet de relief) */
     transition: 0.5s;
 }
 
@@ -69,7 +69,12 @@ margin-left: 5px;
     justify-content: left;
 }
 
-.NomStatus{
+.pp{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid white;
+    flex-direction: row;
     
 }
 
@@ -84,68 +89,56 @@ margin-left: 5px;
 
 .menu-item{
     font-size:2cap;
+     
 }
 
 
+
+
+/* --- RESET DES LIENS --- */
+.menu-item a {
+    text-decoration: none; /* Enlève le soulignement */
+    color: white;          
+    
+}
+
+/* --- LE MENU ITEM --- */
 .menu-item li {
-    position: relative; /* Indispensable pour que le remplissage reste dans la boîte */
-    padding: 10px 10px;
-    border: 1px solid transparent; /* Prépare la bordure pour le hover */
-    overflow: hidden;   /* Coupe tout ce qui dépasse (le remplissage) */
-    z-index: 1;         /* Crée un contexte d'empilage */
-    transition: 0.3s;
+    position: relative; 
+    padding: 10px 15px;
+    border: 1px solid transparent; 
+    overflow: hidden;   
+    z-index: 1; 
+    list-style: none; 
 }
 
-/* On crée la couche de remplissage avec ::before */
-.menu-item li::before {
+/* --- L'EFFET DE REMPLISSAGE (HAUT -> BAS) --- */
+.menu-item li a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;           /* Départ à 0 (vide) */
-    height: 100%;
-    background-color: #00ff41; /* La couleur de remplissage (Vert Matrix) */
-    z-index: -1;        /* Se place DERRIÈRE le texte */
-    transition: width 0.4s ease-in-out; /* Animation de la largeur */
+    width: 100%;        /* Largeur pleine dès le départ */
+    height: 0;          /* DÉPART : Hauteur à 0 pour l'effet Haut -> Bas */
+    background-color: #1be74ed3; 
+    z-index: -1;        
+    transition: height 0.2s ease-in-out; /* Animation sur la HAUTEUR maintenant */
 }
 
-/* L'EFFET AU SURVOL */
+/* --- L'EFFET AU SURVOL --- */
 
-/* 1. Le rectangle se remplit */
-.menu-item li:hover::before {
-    width: 100%;        /* Le rectangle devient plein */
-}
-
-/* 2. Le texte change de couleur pour rester lisible sur le vert */
-.menu-item li:hover a, 
-.menu-item li:hover p {
-    color: #000 !important; /* Devient noir pour trancher avec le vert */
-    text-shadow: none;
-}
-
-/* 3. Style optionnel pour le texte par défaut */
-.menu-item a {
-    text-decoration: none;
-    color: inherit;
-    z-index: 2;
+/* 1. Le rideau descend */
+.menu-item li a:hover::before {
+    height: 100%;       /* ARRIVÉE : La hauteur remplit toute la case */
+    border-radius: 4px;
 }
 
 .menu-item p {
-    font-size: small;
+    color: white; 
+    font-size: 0.7rem;
     text-align: right;
-
+    margin: 0;
 }
-
-.menu-item li a:hover::after {
-    background-color: #006eff;
-    transition: 0.2s;
-}
-
-.menu-item li:hover{
-    color: #00ff41;         /* Le lien devient vert néon */
-    text-shadow: 0 0 5px #00ff41; /* Petite lueur au survol */
-}
-
 
 
 /* 1. Le conteneur qui gère la position */
@@ -159,7 +152,7 @@ margin-left: 5px;
 
 /* 2. Le bouton visible (FR) */
 .lang-selected {
-    background-color: #b7eb50; /* Le vert pomme/jaune de ton image */
+    background-color: #50eb65; /* Le vert pomme/jaune de ton image */
     color: #1a1a1a;            /* Texte sombre pour le contraste */
     padding: 5px 12px;
     display: flex;
@@ -174,9 +167,7 @@ margin-left: 5px;
 }
 
 /* On remet le texte et l'image droit à l'intérieur du bloc penché */
-.lang-selected img, 
-.lang-selected span, 
-.lang-selected i {
+.lang-selected img, .lang-selected span, .lang-selected i {
     transform: skew(15deg); 
 }
 
@@ -198,7 +189,7 @@ margin-left: 5px;
     top: 110%;
     left: 0;
     background-color: #0a0a0a;
-    border: 1px solid #b7eb50;
+    border: 1px solid #6aeb50;
     list-style: none;
     padding: 5px 0;
     width: 100%;
@@ -234,7 +225,7 @@ margin-left: 5px;
 
 /* Change la couleur au survol de l'option EN */
 .lang-list li:hover {
-    background-color: #b7eb50;
+    background-color: #55eb50;
     color: #000;
 }
 
@@ -242,6 +233,40 @@ margin-left: 5px;
 .lang-selected:hover {
     box-shadow: 0 0 10px #b7eb50;
 }
+
+
+
+
+
+
+/* Le style du lien quand il est "actif" */
+nav ul .active {
+    background-color: #00ff40d0; /* Ton vert Matrix */
+    color: #000;               /* Texte noir pour le contraste sur fond vert */
+    padding: 8px 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #00ff41; /* Petit effet néon */
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main{
     width: 100%;
@@ -281,19 +306,21 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #050505;
+    background-color: #000000;
+    
 }
 
 .accordion {
     display: flex;
     width: 90%;
-    height: 60vh;
+    height: 100%;
     gap: 10px;
     margin-top: 20px;
 }
 
 .tab {
     flex: 1; /* Taille égale pour toutes les colonnes au départ */
+    justify-items: center;
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -315,20 +342,24 @@ section{
 /* LE CONTENU (Texte et Lien) */
 .tab .content {
     position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    justify-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 70%, transparent);
     color: white;
     opacity: 0; /* Caché par défaut */
     transform: translateY(20px);
     transition: 0.4s 0.2s; /* Petit délai pour attendre que la colonne s'ouvre */
+    text-align: justify;
+    padding: 200px 100px 0px 100px;
+    line-height:25px;
+    font-size: large;
+    height: 100%;
 }
 
 .tab:hover .content {
     opacity: 1;
     transform: translateY(0);
+    
 }
 
 .tab h3 {
@@ -336,9 +367,13 @@ section{
     font-family: 'Courier New', monospace;
     font-size: 1.8rem;
     margin-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.btn-projets {
+
+
+/*.btn-projets {
     display: inline-block;
     margin-top: 15px;
     padding: 8px 20px;
@@ -347,43 +382,42 @@ section{
     text-decoration: none;
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
-}
-
-.btn-projets:hover {
-    background: #00ff41;
-    color: #000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 
 
 
 .skills-section {
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100vh; /* Garde le min-height */
+    height: auto;      /* FORCE la hauteur à s'adapter au contenu */
     background-color: #0a0a0a;
-    padding: 60px 20px;
-    text-align: center;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(15, 73, 7));
+    padding: 60px 0 100px 0; /* Un gros padding en bas pour respirer */
+    
+    /* On s'assure que rien ne déborde visuellement */
+    overflow: hidden; 
+    display: block; /* On repasse en block pour laisser le flux naturel */
 }
+
+
+.h2{
+            color: white;
+            font-size: 55px;
+            font-family: 'Courier New', monospace;;
+}
+
 
 /* Grille principale à 3 colonnes */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 95%;
-    max-width: 1300px; /* On élargit pour occuper l'écran */
+    max-width: 1300px;
     margin: 50px auto;
+    /* On s'assure que la grille ne flotte pas */
+    clear: both; 
 }
 
 /* Chaque colonne de domaine */
@@ -438,11 +472,11 @@ section{
 }
 
 .logo-skill {
-    font-size: 1.4rem;
-    color: #fff;
-    width: 25px; /* Largeur fixe pour que tout soit aligné */
-    text-align: center;
+    font-size: 1.1rem; /* Taille harmonieuse avec le texte */
+    margin-right: 10px;
+    vertical-align: middle;
 }
+
 
 .stars {
     color: #00ff41;
@@ -453,11 +487,10 @@ section{
 
 /* --- COMMENT COMBLER LE VIDE EN BAS --- */
 .skills-footer {
-    margin-top: 50px;
+    margin: 50px auto 0 auto; /* 50px d'espace au dessus */
     width: 95%;
     max-width: 1300px;
-    display: flex;
-    justify-content: flex-start;
+    padding-bottom: 50px; /* IMPORTANT : Cela va forcer le fond vert à descendre plus bas que la légende */
 }
 
 .legend-box {
@@ -480,9 +513,17 @@ section{
 }
 
 
-footer{
-     background-color: #ffffff;
-  text-align: center;
-  color: #000000;
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    position: relative; /* Sécurité pour le flux HTML */
+    z-index: 10;
 }
 
+.skills-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
