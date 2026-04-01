@@ -75,10 +75,12 @@ margin-left: 5px;
 
 /* Style pour l'image de profil */
 .pp {
-    width: 40px;           /* Ajuste la taille selon tes besoins */
-    height: 40px;
+     width: 50px;
+    height: 50px;
     border-radius: 50%;    /* Rend l'image ronde si tu le souhaites */
     object-fit: cover;     /* Évite de déformer l'image */
+    border: 2px solid white;
+    flex-direction: row;
 }
 
 
