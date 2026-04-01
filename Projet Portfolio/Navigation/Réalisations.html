@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ep1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Navigation/doc/pp2.png" >
+    <title> Expériences | Portfolio </title>
+</head>
+<body>
+
+    <header>
+        <nav class="navigation">
+            <div class="identity">
+                <a href="#accueil">
+                    <img src="doc/pp2.png" alt="PhotoProfile" class="pp">_./LOLYWOOD</img>
+                </a> 
+            </div>
+            
+            <ul class="menu-item">
+                <li><p>0001</p><a href="~/Navigation/Acceuil.html">~/Accueil</a></li>
+                <li><p>0010</p><a href="#a-propos">~/A-propos</a></li>
+                <li><p>0011</p><a href="Competences.html">~/Compétences</a></li>
+                <li class="active"><p>0100</p><a href="Experiences.html">~/Expériences</a></li>
+                <li><p>0101</p><a href="Contact.html">~/Contact</a></li>
+
+                <div class="lang-dropdown">
+                    <div class="lang-selected">
+                        <img src="https://media.cdnws.com/_i/4335/290/359/92/drapeau-france-2.png" alt="FR">
+                        <span>FR</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="lang-list">
+                        <li>
+                            <a href="#">
+                                <img src="https://www.larousse.fr/encyclopedie/data/images/1009498-Drapeau_du_Royaume-Uni_de_Grande-Bretagne_et_dIrlande_du_Nord.jpg" alt="EN">
+                                <span>EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+<main>
+
+
+<section class="project-detail">
+    <div class="project-container">
+        
+        <!-- Côté Gauche : Titre stylisé -->
+        <div class="project-sidebar">
+            <h1 class="vertical-title">CYBER<span>00</span></h1>
+        </div>
+
+        <!-- Centre : Infos et Outils -->
+        <div class="project-main">
+            <div class="project-header">
+                <span class="category-tag">00 Projet perso/ SAE / Stage / Aternance</span>
+                <h2>EXPEREIENCES/PROJET PRO</h2>
+                <p class="project-text">
+                    [SYSTEM_LOG]: Accès aux archives de projets... OK.
+
+Explorez ici mes travaux techniques : des missions concrètes issues de mes stages, mon alternance, ainsi que mes SAÉ et projets académiques. De l'administration système à la cybersécurité, découvrez les solutions et technologies que je maîtrise à travers chaque défi relevé.
+                </p>
+            </div>
+        </div>
+
+       
+    </div>
+
+<section class="cyber-gallery-carousel">
+    <div class="carousel-container">
+        
+        <div class="carousel-sidebar">
+            <h2 class="vertical-title">_DOCS.<span class="glow-text">EXE</span></h2>
+        </div>
+
+        <div class="carousel-main">
+            <div class="carousel-nav">
+                <button class="nav-arrow up" onclick="moveGalleryCarousel(-1)"><i class="fa-solid fa-angle-up"></i></button>
+                <button class="nav-arrow down" onclick="moveGalleryCarousel(1)"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+
+            <div class="carousel-window">
+                <div class="carousel-track" id="galleryTrack">
+                    <a href="#accueil">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://imgng.societe.com/img/logo-societe-og-1200.png" alt="Aperçu Nmap Scan">
+                            <div class="scan-line"></div> </div>
+                        <div class="item-description">
+                            <span class="step-num">01_</span>
+                            <h4>Initial Reconnaissance / Nmap</h4>
+                            <p> Scan synoptique complet. Identification des ports 22, 80, 443 ouverts. Détection de services obsolètes sur le port 8080.</p>
+                        </div>
+
+                    </div>
+                </a>
+
+
+
+                    <a href="#accueil">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://www.nolme.com/wp-content/uploads/2017/10/logo_230.png" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">02_</span>
+                            <h4>Web Audit / SQL Injection</h4>
+                            <p> Interception des requêtes avec Burp Suite. Identification d'un paramètre vulnérable aux injections SQL sur la page de login.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+                    <a href="#accueil">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="images/capture-03.jpg" alt="Aperçu Metasploit Shell">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">03_</span>
+                            <h4>Exploitation / Reverse Shell</h4>
+                            <p> Utilisation de Metasploit pour exploiter la vulnérabilité AD. Obtention d'un shell utilisateur à distance avec privilèges limités.</p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</main>
+
+
+
+<footer>
+    <p>2026, Tous Droits Réservés © • Anonyme Hacker</p>
+</footer>
+
+<script>
+    // 1. Variables globales
+    let galleryOffset = 0;
+    const itemFullHeight = 230; // Hauteur de l'item + gap
+    const galleryTrack = document.getElementById('galleryTrack');
+    const totalGalleryItems = galleryTrack.children.length;
+    const visibleGalleryItems = 2; // Nombre d'images visibles simultanément
+    const galleryWindow = document.querySelector('.carousel-window');
+
+    // 2. Fonction de déplacement
+    function moveGalleryCarousel(direction) {
+        const maxGalleryScroll = (totalGalleryItems - visibleGalleryItems) * itemFullHeight;
+
+        if (direction === 1) { // Descendre
+            if (galleryOffset < maxGalleryScroll) {
+                galleryOffset += itemFullHeight;
+            }
+        } else if (direction === -1) { // Monter
+            if (galleryOffset > 0) {
+                galleryOffset -= itemFullHeight;
+            }
+        }
+
+        // Applique la translation verticale
+        galleryTrack.style.transform = `translateY(-${galleryOffset}px)`;
+    }
+
+    // 3. Gestion de la molette (Wheel)
+    galleryWindow.addEventListener('wheel', (e) => {
+        // Empêche le scroll de la page principale
+        e.preventDefault();
+        
+        if (e.deltaY > 0) {
+            moveGalleryCarousel(1);  // Molette bas
+        } else {
+            moveGalleryCarousel(-1); // Molette haut
+        }
+    }, { passive: false });
+
+    // 4. Support Tactile (Mobile)
+    let touchStartY = 0;
+    galleryWindow.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    galleryWindow.addEventListener('touchend', (e) => {
+        let touchEndY = e.changedTouches[0].clientY;
+        // Seuil de 50px pour éviter les déclenchements accidentels
+        if (touchStartY > touchEndY + 50) {
+            moveGalleryCarousel(1);  // Swipe vers le haut
+        } else if (touchStartY < touchEndY - 50) {
+            moveGalleryCarousel(-1); // Swipe vers le bas
+        }
+    }, { passive: true });
+</script>
+
+    
+
+
+
+
+</body>
+</html>
