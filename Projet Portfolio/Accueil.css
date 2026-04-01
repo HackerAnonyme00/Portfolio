@@ -63,20 +63,25 @@ margin-left: 5px;
 }
 
 
-.identity{
-    display: flex;          /* Aligne le texte et le point de statut */
-    align-items: center;    /* Centre verticalement */
-    justify-content: left;
+/* Style pour le conteneur du lien */
+.identity a {
+    display: flex;         /* Active le mode Flexbox */
+    align-items: center;   /* Aligne verticalement l'image et le texte au centre */
+    gap: 10px;             /* Crée un espace entre l'image et le texte */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: white;          /* Met le texte en blanc */
+    font-family: monospace; /* Pour garder le style "terminal" du ./LOLYWOOD */
 }
 
-.pp{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: 2px solid white;
-    flex-direction: row;
-    
+/* Style pour l'image de profil */
+.pp {
+    width: 40px;           /* Ajuste la taille selon tes besoins */
+    height: 40px;
+    border-radius: 50%;    /* Rend l'image ronde si tu le souhaites */
+    object-fit: cover;     /* Évite de déformer l'image */
 }
+
+
 
 .Status{
     width: 10px;            /* Largeur du point */
