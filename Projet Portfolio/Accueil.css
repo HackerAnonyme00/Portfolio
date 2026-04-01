@@ -71,6 +71,7 @@ margin-left: 5px;
     text-decoration: none; /* Enlève le soulignement du lien */
     color: white;          /* Met le texte en blanc */
     font-family: monospace; /* Pour garder le style "terminal" du ./LOLYWOOD */
+    margin-top:30px;
 }
 
 /* Style pour l'image de profil */
