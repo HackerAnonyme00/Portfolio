@@ -112,32 +112,35 @@ margin-left: 5px;
     list-style: none; 
 }
 
-/* --- L'EFFET DE REMPLISSAGE (HAUT -> BAS) --- */
+/* --- L'EFFET DE REMPLISSAGE (SURVOL) --- */
 .menu-item li a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;        /* Largeur pleine dès le départ */
-    height: 0;          /* DÉPART : Hauteur à 0 pour l'effet Haut -> Bas */
-    background-color: #1be74ea4; 
-    z-index: -1;        
-    transition: height 0.2s ease-in-out; /* Animation sur la HAUTEUR maintenant */
+    width: 100%;
+    height: 0;
+    /* Couleur du "rideau" au survol : vert très discret */
+    background-color: rgba(0, 255, 64, 0.829); 
+    z-index: -1;
+    transition: height 0.2s ease-in-out;
 }
 
-/* --- L'EFFET AU SURVOL --- */
-
-/* 1. Le rideau descend */
 .menu-item li a:hover::before {
-    height: 100%;       /* ARRIVÉE : La hauteur remplit toute la case */
+    height: 100%;
 }
 
-
-.menu-item li:hover a, .menu-item li:hover p {
-    color: #000; 
-    transition: 0.2s;
+/* --- L'ÉTAT ACTIF (STYLE DE L'IMAGE) --- */
+/* On cible le lien qui a la classe .active */
+nav ul .active {
+    background-color: rgba(0, 255, 64, 0.336); /* Le rectangle vert transparent */
+    border-bottom: 4px solid #00ff41; /* La barre lumineuse en bas */
+    
+    /* On s'assure qu'il n'y a pas d'arrondi ni d'ombre inutile */
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: normal; 
 }
-
 
 .menu-item p {
     color: white; 
@@ -145,6 +148,7 @@ margin-left: 5px;
     text-align: right;
     margin: 0;
 }
+
 
 
 /* 1. Le conteneur qui gère la position */
