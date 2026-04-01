@@ -44,48 +44,105 @@
         </nav>
     </header>
 
-
-
-    <main>
-        <section id="Projets" class="projets-section">
+ <main>
+     <section id="Projets" class="projets-section">
     <div class="accordion">
+        
+        <!-- ONGLET 01 : ADMIN RÉSEAU -->
         <div class="tab" style="background-image: url('https://previews.123rf.com/images/rbhavana/rbhavana1109/rbhavana110900308/11316320-computer-network-in-abstract-background.jpg');">
-           <a href="Réalisations.html"> 
             <div class="content">
-                <h3>01. Administrer les réseaux et l'internet'</h3>
-                <p> L'administration des réseaux et de l'Internet implique la gestion des infrastructures et des protocoles qui permettent la connectivité et la communication entre les utilisateurs. Cela comprend la surveillance des performances, la configuration des équipements réseau, la gestion des adresses IP, la mise en œuvre des mesures de sécurité et la résolution des problèmes liés à la connectivité. L'objectif principal de l'administration des réseaux et de l'Internet est de garantir un accès fiable, sécurisé et efficace aux ressources en ligne, tout en veillant à la stabilité et à la disponibilité des services.</p>
+                <h3>01. Administrer les réseaux</h3>
+                <p>L'administration des réseaux et de l'Internet implique la gestion des infrastructures et des protocoles qui permettent la connectivité et la communication entre les utilisateurs. Cela comprend la surveillance des performances, la configuration des équipements réseau, la gestion des adresses IP, la mise en œuvre des mesures de sécurité et la résolution des problèmes liés à la connectivité. L'objectif principal de l'administration des réseaux et de l'Internet est de garantir un accès fiable, sécurisé et efficace aux ressources en ligne, tout en veillant à la stabilité et à la disponibilité des services.</p>
+                
+                <div class="tab-controls">
+    <button class="tab-btn" onclick="globalFilter('admin', 'Competences')">
+        <i class="fa-solid fa-gears"></i> Compétences
+    </button>
+    <button class="tab-btn btn-ext" onclick="globalFilter('admin', 'Portfolio')">
+        <i class="fa-solid fa-diagram-project"></i> Réalisations
+    </button>
+</div>
             </div>
-       </a>
         </div>
 
+        <!-- ONGLET 02 : CYBERSÉCURITÉ -->
         <div class="tab" style="background-image: url('https://www.lexing.law/wp-content/uploads/2021/03/Cyber-security-information-privacy-and-data-protection-concept-on-server-room-background-cFuntap@AdobeStock_210510694-scaled.jpeg');">
-            <a href="Réalisations.html">
             <div class="content">
                 <h3>02. Cybersécurité</h3>
                 <p>Le module de cybersécurité se concentre sur le Pentesting et la gestion des vulnérabilités. Explorer les techniques avancées pour évaluer et renforcer la sécurité des systèmes informatiques. Le Pentesting implique des simulations d'attaques éthiques pour identifier les failles potentielles. La gestion des vulnérabilités enseigne comment détecter, classer et atténuer les risques. Ce module prépare à relever les défis de la cybersécurité dans un paysage numérique en constante évolution.</p>
-            </div>
-            </a>
-        </div>
-
-        <div class="tab" style="background-image: url('https://etudestech.com/wp-content/uploads/2021/11/langage-de-programmation-etudes-tech.jpg');">
-            <a href="Réalisations.html">
-            <div class="content">
-                <h3>03. Programmation & développement </h3>
-                <p>Créer des outils et applications informatiques pour la recherche et le développement permet d'optimiser les processus, de collecter et d'analyser efficacement les données. Ces outils informatiques de programmation offrent des fonctionnalités avancées telles que la modélisation, la simulation, la visualisation des données et l'automatisation, qui permettent d'accélérer les découvertes scientifiques et technologiques. </p>
-            </div>
-        </a>
-        </div>
-
-        <div class="tab" style="background-image: url('https://maisons-alfort.fr/wp-content/uploads/2019/01/TRAVAUX.jpg');">
-            <a href="Réalisations.html">
-            <div class="content">
-                <h3>Section en travaux</h3>
                 
+                <div class="tab-controls">
+    <button class="tab-btn" onclick="globalFilter('cyber', 'Competences')">
+        <i class="fa-solid fa-shield-halved"></i> Compétences
+    </button>
+    <button class="tab-btn btn-ext" onclick="globalFilter('cyber', 'Portfolio')">
+        <i class="fa-solid fa-bug"></i> Réalisations
+    </button>
+</div>
             </div>
-            </a>
         </div>
+
+        <!-- ONGLET 03 : DEV -->
+        <div class="tab" style="background-image: url('https://etudestech.com/wp-content/uploads/2021/11/langage-de-programmation-etudes-tech.jpg');">
+            <div class="content">
+                <h3>03. Programmation & Dev</h3>
+                <p>Créer des outils et applications informatiques pour la recherche et le développement permet d'optimiser les processus, de collecter et d'analyser efficacement les données. Ces outils informatiques de programmation offrent des fonctionnalités avancées telles que la modélisation, la simulation, la visualisation des données et l'automatisation, qui permettent d'accélérer les découvertes scientifiques et technologiques.</p>
+                
+                <div class="tab-controls">
+    <button class="tab-btn" onclick="globalFilter('web_developpement', 'Competences')">
+        <i class="fa-solid fa-code"></i> Compétences
+    </button>
+    <button class="tab-btn btn-ext" onclick="globalFilter('web_developpement', 'Portfolio')">
+        <i class="fa-solid fa-laptop-code"></i> Réalisations
+    </button>
+</div>
+            </div>
+        </div>
+
+        <!-- ONGLET 04 : -->
+        <div class="tab" style="background-image: url('https://maisons-alfort.fr/wp-content/uploads/2019/01/TRAVAUX.jpg');">
+            <div class="content">
+                <h3>04. En travaux</h3>
+                <p></p>
+                
+                <div class="tab-controls">
+                    <button class="tab-btn" onclick=>
+                        <i class="fa-solid fa-code"></i> Compétences
+                    </button>
+                    <button class="tab-btn btn-ext" onclick=>
+    <i class="fa-solid fa-laptop-code"></i> Réalisations
+</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ONGLET 05 : DEV -->
+        <div class="tab" style="background-image: url('https://static.wikia.nocookie.net/bokunoheroacademia/images/9/9a/One_For_All_Quirk.png/revision/latest/scale-to-width-down/1200?cb=20161116230609&path-prefix=fr');">
+            <div class="content">
+                <h3>00. All </h3>
+                <p>Tous ce que j'ai pu réaliser</p>
+                
+                <div class="tab-controls">
+                    <button class="tab-btn" onclick="filterAndScroll('skill-category','Competences'); filterOnly('all', 'Portfolio')">
+                        <i class="fa-solid fa-code"></i> Compétences
+                    </button>
+                    <button class="tab-btn btn-ext" onclick="filterAndScroll('all', 'Portfolio'); filterOnly('skill-category', 'Competences')">
+    <i class="fa-solid fa-laptop-code"></i> Réalisations
+</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+
+
+
+
+
 
       <section id="Competences" class="skills-section">
     <div class="header-spacer"></div>
@@ -93,7 +150,7 @@
 
     <div class="skills-grid">
     <!-- 01. WEB DEVELOPMENT -->
-    <div class="skill-category">
+    <div class="skill-category web_developpement">
         <h3><i class="fa-solid fa-globe"></i> WEB_DEVELOPMENT</h3>
         <div class="skill-box">
             <div class="skill-info"><i class="fa-brands fa-js-square logo-skill"></i> <span>JavaScript</span></div>
@@ -113,7 +170,7 @@
     </div>
 
     <!-- 02. ADMIN SYSTEMS & RÉSEAUX -->
-    <div class="skill-category">
+    <div class="skill-category admin">
         <h3><i class="fa-solid fa-server"></i> ADMIN_SYS_RESEAUX</h3>
         <div class="skill-box">
             <div class="skill-info"><i class="fa-brands fa-linux logo-skill"></i> <span>Linux (Debian/Ubuntu)</span></div>
@@ -134,7 +191,7 @@
     </div>
 
     <!-- 03. PENTESTING -->
-    <div class="skill-category">
+    <div class="skill-category cyber">
         <h3><i class="fa-solid fa-shield-halved"></i> PENTESTING</h3>
         <div class="skill-box">
             <div class="skill-info"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSWgpYJ8K9H7JnCuw86GhThBZdjIn6NZbCCA&s" width="20"> <span>Nmap / Nessus</span></div>
@@ -151,7 +208,7 @@
     </div>
 
     <!-- 04. CYBERSÉCURITÉ (Défense) -->
-    <div class="skill-category">
+    <div class="skill-category cyber">
         <h3><i class="fa-solid fa-user-shield"></i> CYBER_DEFENSE</h3>
         <div class="skill-box">
             <div class="skill-info"><i class="fa-solid fa-border-all"></i> <span>Firewall (iptables)</span></div>
@@ -165,10 +222,18 @@
             <div class="skill-info"><i class="fa-solid fa-box"></i> <span>Virtualbox</span></div>
             <div class="stars">★★★★☆</div>
         </div>
+        <div class="skill-box">
+            <div class="skill-info"><i class="fa-solid fa-box"></i> <span>PFsense</span></div>
+            <div class="stars">★★★★☆</div>
+        </div>
+        <div class="skill-box">
+            <div class="skill-info"><i class="fa-solid fa-box"></i> <span>AppLocker</span></div>
+            <div class="stars">★★★★☆</div>
+        </div>
     </div>
 
     <!-- 05. SUPERVISION & DATA -->
-    <div class="skill-category">
+    <div class="skill-category cyber">
         <h3><i class="fa-solid fa-magnifying-glass"></i> SUPERVISION_DATA</h3>
         <div class="skill-box">
             <div class="skill-info"><i class="fa-solid fa-chart-line"></i> <span>Elastic Stack (ELK)</span></div>
@@ -181,7 +246,7 @@
     </div>
 
     <!-- 06. PROGRAMMATION & IDE -->
-    <div class="skill-category">
+    <div class="skill-category web_developpement">
         <h3><i class="fa-solid fa-code"></i> PROG_ENVIRONNEMENT</h3>
         <div class="skill-box">
             <div class="skill-info"><i class="fa-brands fa-python logo-skill"></i> <span>Python / Bash</span></div>
@@ -211,25 +276,605 @@
             <p><code>[ INFO ]</code> ★☆☆☆☆ : Basic | ★★★☆☆ : Intermediaire | ★★★★★ : Expert</p>
         </div>
     </div>
-</section> <!-- Ferme bien la section ici -->
+</section> 
+    
 
-<!-- Supprime le </div> et le </main> s'ils ne correspondent à rien au dessus -->
+
+<section id="Portfolio" class="gallery-section">
+    <h2 class="h2">LAB & EXERCICES</h2>
+
+    <!-- Menu de Filtrage -->
+    <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all">All <sup>10</sup></button>
+        <button class="filter-btn" data-filter="web">Web Dev <sup>03</sup></button>
+        <button class="filter-btn" data-filter="cyber">Cyber Security <sup>05</sup></button>
+        <button class="filter-btn" data-filter="script">Scripts <sup>02</sup></button>
+    </div>
+
+    <!-- La Grille -->
+    <div class="gallery-grid">
+        <!-- Projet 1 (Web) -->
+        <div class="gallery-card filter-item web_developpement">
+            <div class="card-image">
+                <img src="https://images.epagine.fr/711/9782746071711_1_75.jpg" alt="Projet Web">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-eye"></i> Voir le code</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3> Fondamentaux de la programmation python</h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="https://codeur-pro.fr/wp-content/uploads/2020/11/fonctionnement_OS.png" alt="Projet Cyber">
+            </div>
+            <div class="card-info">
+                <h3> Base des systèmes d'exploitation</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+        
+        <!-- Ajoute d'autres cartes ici -->
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item web_developpement">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3> Se présenter sur Internet </h3>
+                <p>Web Development</p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item admin">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Architecture des systèmes numériques et informatiques</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item admin">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3> Initiation aux réseaux informatiques </h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>R202 - Admin system et fondamentaux de la virtualisation</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Bases des services réseaux</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sources de données</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Analyse et traitement des données structurées</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Initialisation dévelloppement Web</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Technologie de l'internet</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Réseaux de Campus</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Services réseaux avancés</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Service d'annuaire</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Consolidation de la programmation</h3>
+                <p>Programmation evenmentielle</p>
+            </div>
+        </div>
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Gestion d'un système de bases de données</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Methodologie du pentesting</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Infrastructure de sécurité</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Automatisation des tâches d'administration</h3>
+                <p>Cyber Security</p>
+            </div>
+        </div>
+
+
+        <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurité des Réseaux LAN</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurité des Réseaux LAN</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurité des Réseaux LAN</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Cryptographie</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurisation de service réseaux</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Supervision réseaux</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Cycle d'un projet de vie informatique</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Supervision de la sécurité</h3>
+                <p></p>
+            </div>
+        </div>
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Architectures sécurisées</h3>
+                <p></p>
+            </div>
+        </div>
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Audits de sécurité</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Normes standards et analyse de risques</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurité des Réseaux LAN</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+
+         <!-- Projet 2 (Cyber) -->
+        <div class="gallery-card filter-item cyber">
+            <div class="card-image">
+                <img src="ton-image-2.jpg" alt="Projet Cyber">
+                <div class="card-overlay">
+                    <a href="#" class="view-link"><i class="fa-solid fa-terminal"></i> Write-up</a>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sécurité des Réseaux LAN</h3>
+                <p></p>
+            </div>
+        </div>
+
+
+         
+
+    </div>
+</section>
+
+
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+
 
 <footer>
     <p>2026, Tous Droits Réservés © • Anonyme Hacker</p>
 </footer>
-    
+
+<script>
+// On récupère le bouton
+const backToTopBtn = document.getElementById("backToTop");
+
+// On écoute le scroll pour afficher/cacher le bouton
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "flex";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Fonction pour remonter en haut
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Effet de glissement fluide
+    });
+}
+</script>    
 
 
 
 <script>
+    // Sélection des éléments
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 1. Gérer l'état actif des boutons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // 2. Récupérer la catégorie à filtrer
+            const filterValue = button.getAttribute('data-filter');
+
+            // 3. Filtrer les cartes de la galerie
+            galleryItems.forEach(item => {
+                // On ajoute une petite animation de sortie
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+
+                setTimeout(() => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                        // Petit délai pour l'effet d'entrée
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }, 300); // Temps correspondant à la transition CSS
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+    // --- GARDE CE BLOC (Mouvement de la bulle / drag & drop) ---
     const world = document.getElementById('bubbleWorld');
     const viewport = document.getElementById('viewport');
-
     let isDragging = false;
     let startX, startY;
-    
-    // On récupère la position actuelle pour éviter le saut au démarrage
     let translateX = 0; 
     let translateY = 0;
 
@@ -247,24 +892,66 @@
 
     window.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
-
         const deltaX = e.clientX - startX;
         const deltaY = e.clientY - startY;
-
         translateX += deltaX;
         translateY += deltaY;
-
-        // On applique la transformation en gardant le centrage CSS via translate(-50%, -50%) 
-        // et en ajoutant le décalage souris en pixels
         world.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px))`;
-
         startX = e.clientX;
         startY = e.clientY;
     });
 </script>
+
+<script>
+    // --- NOUVELLE FONCTION UNIQUE (Remplace toutes les autres) ---
+    function globalFilter(category, sectionToScrollId) {
+        // 1. Filtrage simultané des Compétences
+        const skills = document.querySelectorAll('.skill-category');
+        skills.forEach(skill => {
+            if (category === 'all' || skill.classList.contains(category)) {
+                skill.style.display = 'block';
+                skill.style.opacity = '1';
+                skill.style.transform = 'scale(1)';
+            } else {
+                skill.style.opacity = '0.2';
+                skill.style.transform = 'scale(0.95)';
+            }
+        });
+
+        // 2. Filtrage simultané du Portfolio
+        const projects = document.querySelectorAll('.filter-item');
+        projects.forEach(project => {
+            if (category === 'all' || project.classList.contains(category)) {
+                project.style.display = 'block';
+                setTimeout(() => { project.style.opacity = '1'; }, 10);
+            } else {
+                project.style.display = 'none';
+                project.style.opacity = '0';
+            }
+        });
+
+        // 3. Scroll vers la section cliquée
+        if (sectionToScrollId) {
+            const targetSection = document.getElementById(sectionToScrollId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }
+</script>
+
+
 
 
 
 
 </body>
 </html>
+
+
+
+    
+    
