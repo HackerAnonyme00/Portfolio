@@ -112,25 +112,34 @@ margin-left: 5px;
     list-style: none; 
 }
 
-/* --- L'EFFET DE REMPLISSAGE (HAUT -> BAS) --- */
+/* --- L'EFFET DE REMPLISSAGE (SURVOL) --- */
 .menu-item li a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;        /* Largeur pleine dès le départ */
-    height: 0;          /* DÉPART : Hauteur à 0 pour l'effet Haut -> Bas */
-    background-color: #1be74ed3; 
-    z-index: -1;        
-    transition: height 0.2s ease-in-out; /* Animation sur la HAUTEUR maintenant */
+    width: 100%;
+    height: 0;
+    /* Couleur du "rideau" au survol : vert très discret */
+    background-color: rgba(0, 255, 64, 0.829); 
+    z-index: -1;
+    transition: height 0.2s ease-in-out;
 }
 
-/* --- L'EFFET AU SURVOL --- */
-
-/* 1. Le rideau descend */
 .menu-item li a:hover::before {
-    height: 100%;       /* ARRIVÉE : La hauteur remplit toute la case */
-    border-radius: 4px;
+    height: 100%;
+}
+
+/* --- L'ÉTAT ACTIF (STYLE DE L'IMAGE) --- */
+/* On cible le lien qui a la classe .active */
+nav ul .active {
+    background-color: rgba(0, 255, 64, 0.336); /* Le rectangle vert transparent */
+    border-bottom: 4px solid #00ff41; /* La barre lumineuse en bas */
+    
+    /* On s'assure qu'il n'y a pas d'arrondi ni d'ombre inutile */
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: normal; 
 }
 
 .menu-item p {
@@ -237,17 +246,6 @@ margin-left: 5px;
 
 
 
-
-
-/* Le style du lien quand il est "actif" */
-nav ul .active {
-    background-color: #00ff40d0; /* Ton vert Matrix */
-    color: #000;               /* Texte noir pour le contraste sur fond vert */
-    padding: 8px 15px;
-    border-radius: 4px;
-    box-shadow: 0 0 5px #00ff41; /* Petit effet néon */
-    font-weight: bold;
-}
 
 
 
@@ -373,16 +371,73 @@ section{
 
 
 
-/*.btn-projets {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
+.tab-controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    pointer-events: auto; /* Assure que les boutons sont cliquables */
+}
+
+.tab-btn {
+    background: rgba(0, 0, 0, 0.6);
     border: 1px solid #00ff41;
     color: #00ff41;
-    text-decoration: none;
+    padding: 10px 18px;
     font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-}*/
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Pour les balises <a> */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn:hover {
+    background: #00ff41;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-ext {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-ext:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* On s'assure que le contenu de l'onglet laisse les boutons cliquables */
+.tab .content {
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -511,6 +566,177 @@ section{
     color: #00ff41;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+.gallery-section {
+    padding: 80px 20px;
+    background: #0a0a0a;
+    min-height: 100vh;
+    height: auto;
+}
+
+/* Menu de filtrage */
+.filter-menu {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.filter-btn sup { font-size: 0.6rem; color: #555; }
+
+.filter-btn.active, .filter-btn:hover {
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+/* Grille */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Carte */
+.gallery-card {
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #222;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+   
+}
+
+/* Image et Overlay */
+.card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.view-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 4px;
+}
+
+/* Infos sous l'image */
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.card-info p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+
+
+.gallery-card {
+    /* ... tes styles précédents ... */
+    transition: transform 0.4s ease, opacity 0.4s ease, border-color 0.3s ease;
+    will-change: transform, opacity;
+}
+
+/* Style optionnel pour le bouton actif si tu ne l'as pas mis */
+.filter-btn.active {
+    color: #00ff41 !important;
+    border-bottom: 2px solid #00ff41;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #00ff41; /* Ta couleur verte cyber */
+    color: #000;              /* Flèche noire pour le contraste */
+    border: none;
+    border-radius: 50%;       /* Forme de cercle */
+    cursor: pointer;
+    display: none;            /* Caché par défaut au début */
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1000;            /* Toujours au-dessus du reste */
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);    /* Petit effet de zoom au survol */
+    background-color: #00cc33;
+}
+
+
+
+
+
+
+
+
+
 
 
 footer {
