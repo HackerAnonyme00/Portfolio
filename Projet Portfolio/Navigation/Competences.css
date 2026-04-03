@@ -63,19 +63,23 @@ margin-left: 5px;
 }
 
 
-.identity{
-    display: flex;          /* Aligne le texte et le point de statut */
-    align-items: center;    /* Centre verticalement */
-    justify-content: left;
+.identity a {
+    display: flex;         /* Active le mode Flexbox */
+    align-items: center;   /* Aligne verticalement l'image et le texte au centre */
+    gap: 10px;             /* Crée un espace entre l'image et le texte */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: white;          /* Met le texte en blanc */
+    font-family: monospace; /* Pour garder le style "terminal" du ./LOLYWOOD */
+    margin-top:30px;
 }
 
-.pp{
-    width: 50px;
+.pp {
+     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    border-radius: 50%;    /* Rend l'image ronde si tu le souhaites */
+    object-fit: cover;     /* Évite de déformer l'image */
     border: 2px solid white;
     flex-direction: row;
-    
 }
 
 .Status{
@@ -188,60 +192,58 @@ nav ul .active {
 
 /* 3. La liste déroulante (cachée par défaut) */
 .lang-list {
-    display: block; /* On change display pour opacity pour permettre l'animation */
-    opacity: 0;
-    visibility: hidden;
-    transform: skew(-15deg) translateY(-10px); /* Part d'un peu plus haut */
-    transition: all 0.3s ease-in-out;
-    
     position: absolute;
     top: 110%;
     left: 0;
-    background-color: #0a0a0a;
-    border: 1px solid #6aeb50;
-    list-style: none;
-    padding: 5px 0;
     width: 100%;
-    min-width: 80px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-}
-
-.lang-list li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    transform: skew(15deg); /* Redresse le texte */
-    transition: 0.2s;
+    
+    /* On utilise le vert du bouton par défaut */
+    background-color: #50eb65; 
+    border: none; /* On enlève la bordure noire/verte */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* L'effet penché identique */
+    transform: skew(-15deg) translateY(-10px); 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    
+    /* Empêche le hover noir de dépasser des coins penchés */
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .lang-list li a img {
-    width: 20px;
+    width: 18px;      /* Taille fixe et petite pour le drapeau */
+    height: 12px;     /* Ratio drapeau standard */
+    object-fit: cover; /* Coupe proprement l'image si elle est trop grande */
+    border-radius: 1px;
+    display: block;   /* Évite les décalages de ligne de texte */
+    transform: none;  /* L'image est déjà redressée par le <a>, pas besoin de plus */
 }
 
 /* 4. LES INTERACTIONS (Hover) */
 
 /* Affiche la liste quand on survole le parent */
+.lang-list li a {
+    display: flex;
+    align-items: center; /* Aligne le micro-drapeau et le texte "EN" sur la même ligne */
+font-weight: bold;
+    color: #1a1a1a;
+    transform: skew(15deg); /* Redresse tout le bloc interne */
+}
+
+/* 4. LES INTERACTIONS (Hover) */
+
 .lang-dropdown:hover .lang-list {
-    display: block;
     opacity: 1;
     visibility: visible;
     transform: skew(-15deg) translateY(0);
 }
 
-/* Change la couleur au survol de l'option EN */
-.lang-list li:hover {
-    background-color: #55eb50;
-    color: #000;
-}
-
-/* Petit effet de brillance sur le bouton principal au survol */
-.lang-selected:hover {
-    box-shadow: 0 0 10px #b7eb50;
-}
 
 
 
