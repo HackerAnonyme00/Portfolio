@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Competences.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="Navigation/doc/pp2.png" >
-    <title> Competences | Portfolio </title>
+    <link rel="icon" href="doc/pp2.png" >
+    <title> Compétences | Portfolio </title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
             </div>
             
             <ul class="menu-item">
-                <li><p>0001</p><a href="../Projet Portfolio/Navigation/index.html">~/Accueil</a></li>
+                <li><p>0001</p><a href="../../index.html">~/Accueil</a></li>
                 <li><p>0010</p><a href="../../index.html #a-propos">~/A-propos</a></li>
                 <li class="active"><p>0011</p><a href="Competences.html">~/Compétences</a></li>
                 <li><p>0100</p><a href="Réalisations.html">~/Réalisation</a></li>
@@ -126,10 +126,10 @@
                 <p>Tous ce que j'ai pu réaliser</p>
                 
                 <div class="tab-controls">
-                    <button class="tab-btn" onclick="filterAndScroll('skill-category','Competences'); filterOnly('all', 'Portfolio')">
+                    <button class="tab-btn" onclick="globalFilter('all', 'Competences')">
                         <i class="fa-solid fa-code"></i> Compétences
                     </button>
-                    <button class="tab-btn btn-ext" onclick="filterAndScroll('all', 'Portfolio'); filterOnly('skill-category', 'Competences')">
+                    <button class="tab-btn btn-ext" onclick="globalFilter('all', 'Portfolio')">
     <i class="fa-solid fa-laptop-code"></i> Réalisations
 </button>
                 </div>
