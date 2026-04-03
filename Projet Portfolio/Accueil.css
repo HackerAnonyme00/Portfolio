@@ -136,6 +136,7 @@ margin-left: 5px;
 
 .menu-item li a:hover::before {
     height: 100%;
+    border-radius: 4px;
 }
 
 /* --- L'ÉTAT ACTIF (STYLE DE L'IMAGE) --- */
@@ -469,13 +470,12 @@ section{
 
 /* --- SECTION A PROPOS (Global) --- */
 .about-me {
-    background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
-    background-image:url("Navigation/doc/cc2.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("Navigation/doc/cc2.webp");
     background-size: cover;
 }
 
