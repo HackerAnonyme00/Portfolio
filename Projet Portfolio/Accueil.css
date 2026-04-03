@@ -468,6 +468,12 @@ section{
 }
 
 
+
+
+
+
+
+
 /* --- SECTION A PROPOS (Global) --- */
 .about-me {
     display: flex;
@@ -481,7 +487,7 @@ section{
 
 .h2 {
     font-size: 4rem;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 50px;
     font-family: Arial; /* Pour un look plus moderne sur le titre */
 }
@@ -490,7 +496,7 @@ section{
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    border: 1px solid #444; /* Bordure grise fine */
+    border: 1px solid #ffffff; /* Bordure grise fine */
     width: 100%;
     max-width: 1500px;
     margin-bottom:260px;
@@ -499,7 +505,7 @@ section{
 /* --- LES CARTES INDIVIDUELLES --- */
 .expertise-card {
     padding: 30px 30px;
-    border-right: 1px solid #444; /* Ligne verticale entre les cartes */
+    border-right: 1px solid #ffffff; /* Ligne verticale entre les cartes */
     margin: 20px;
     background-color:rgba(69, 128, 61, 0.678)
 }
@@ -521,35 +527,27 @@ section{
 
 .card-header i {
     font-size: 2.5rem;
-    color: #fff;
+    color: #ffffff;
 }
 
 .card-header h3 {
-    color: #fff;
+    color: #ffffff;
     font-size: 1.5rem;
     line-height: 1.1;
     text-align: center;
 }
 
-/* Soulignement de couleur sous le titre (comme ton image) */
-.icon-software + h3 { border-bottom: 3px solid #e91e63; width: fit-content; }
-.icon-system + h3 { border-bottom: 3px solid #2196f3; width: fit-content; }
-.icon-hack + h3 { border-bottom: 3px solid #ff9800; width: fit-content; }
+
 
 /* --- TEXTE ET TAGS HTML --- */
 .card-body {
     text-align:justify;
-    border-left: 1px solid #444; /* La petite ligne verticale à gauche du texte */
+    border-left: 1px solid #ffffff; 
     padding-left: 20px;
     margin-top: 20px;
 }
 
-.html-tag {
-    display: block;
-    color: #444; /* Gris foncé pour les balises h3 */
-    font-size: 0.8rem;
-    margin: 5px 0;
-}
+
 
 .card-body p {
     color: #ffffff;
@@ -559,35 +557,6 @@ section{
 }
 
 
-
-.myself{}
-
-.btn-details{
-   margin-top: 20px;
-    background: transparent;
-    color: #00ff41;
-    border: 1px solid #00ff41;
-    padding: 8px 15px;
-    font-family: 'Courier New', monospace;
-    cursor: pointer;
-    transition: 0.3s;
-    align-self: flex-start; /* Aligne le bouton à gauche dans la carte */
-}
-
-/* Effet quand la souris passe sur le bouton */
-.btn-details:hover {
-    background: #00ff41;
-    color: #000;
-}
-
-
-
-
-/*.info-details{}
-
-.close-details{}
-
-.more-details{}*/
 
 footer{
      background-color: #ffffff;
