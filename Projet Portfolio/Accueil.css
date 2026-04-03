@@ -237,7 +237,7 @@ nav ul .active {
 .lang-list li a {
     display: flex;
     align-items: center; /* Aligne le micro-drapeau et le texte "EN" sur la même ligne */
-font-weight: bold;
+    font-weight: bold;
     color: #1a1a1a;
     transform: skew(15deg); /* Redresse tout le bloc interne */
 }
