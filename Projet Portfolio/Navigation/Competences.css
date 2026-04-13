@@ -14,7 +14,6 @@ html {
 
 
 body{
-    background-color: rgb(255, 255, 255);
     font-family: 'Courier New', 'Courier New', Courier, monospace;
     overflow-x: hidden;
     margin: 0;
@@ -34,22 +33,22 @@ body{
     z-index: 1000;              /* Passe au-dessus de tout le reste */
     backdrop-filter: blur(10px);          /* flou derrière */
     background-color: transparent;
-    color: rgb(255, 255, 255);
+    color: white;
    
 }
 
 .navigation:hover{
-    background-color:#00000086;
-    box-shadow: 0 5px 10px rgb(73, 204, 73) ; /* Ombre légère sous la barre (effet de relief) */
+    background-color:#00ff41;
+    box-shadow: 0 5px 10px rgb(0, 255, 65) ; /* Ombre légère sous la barre (effet de relief) */
     transition: 0.5s;
 }
 
 
 .navigation ul {
     display: flex;           /* Aligne les liens horizontalement */
-    flex-direction: row;     /* Force le sens "ligne" */
+    flex-direction: row;    
     align-items: center;     /* Centre verticalement les textes */
-    list-style: none;        /* Enlève les points si c'est une liste */
+    list-style: none;        
     margin-right: 50px;
 }
 
@@ -67,26 +66,26 @@ margin-left: 5px;
     display: flex;         /* Active le mode Flexbox */
     align-items: center;   /* Aligne verticalement l'image et le texte au centre */
     gap: 10px;             /* Crée un espace entre l'image et le texte */
-    text-decoration: none; /* Enlève le soulignement du lien */
-    color: white;          /* Met le texte en blanc */
-    font-family: monospace; /* Pour garder le style "terminal" du ./LOLYWOOD */
+    text-decoration: none; 
+    color: white;          
+    font-family: monospace; 
     margin-top:30px;
 }
 
 .pp {
      width: 50px;
     height: 50px;
-    border-radius: 50%;    /* Rend l'image ronde si tu le souhaites */
+    border-radius: 50%;   
     object-fit: cover;     /* Évite de déformer l'image */
     border: 2px solid white;
     flex-direction: row;
 }
 
 .Status{
-    width: 10px;            /* Largeur du point */
-    height: 10px;           /* Hauteur du point */
-    background-color: #00ff41; /* Couleur vert Matrix */
-    border-radius: 50%;     /* Transforme le carré en cercle parfait */
+    width: 10px;           
+    height: 10px;           
+    background-color: #00ff41; 
+    border-radius: 50%;    
     box-shadow: 0 0 8px #00ff41; /* Donne un effet de lumière qui brille */
 }
 
@@ -99,9 +98,8 @@ margin-left: 5px;
 
 
 
-/* --- RESET DES LIENS --- */
 .menu-item a {
-    text-decoration: none; /* Enlève le soulignement */
+    text-decoration: none; 
     color: white;          
     
 }
@@ -116,7 +114,7 @@ margin-left: 5px;
     list-style: none; 
 }
 
-/* --- L'EFFET DE REMPLISSAGE (SURVOL) --- */
+/* --- L'EFFET DE REMPLISSAGEAU SURVOL --- */
 .menu-item li a::before {
     content: "";
     position: absolute;
@@ -124,24 +122,22 @@ margin-left: 5px;
     left: 0;
     width: 100%;
     height: 0;
-    /* Couleur du "rideau" au survol : vert très discret */
-    background-color: rgba(0, 255, 64, 0.829); 
+    background-color: rgba(0, 255, 65, 0.829); 
     z-index: -1;
     transition: height 0.2s ease-in-out;
+    border-radius: 4px;
 }
 
 .menu-item li a:hover::before {
     height: 100%;
 }
 
-/* --- L'ÉTAT ACTIF (STYLE DE L'IMAGE) --- */
-/* On cible le lien qui a la classe .active */
+/* --- L'ÉTAT ACTIF --- */
+
 nav ul .active {
-    background-color: rgba(0, 255, 64, 0.336); /* Le rectangle vert transparent */
+    background-color: rgba(0, 255, 65, 0.336); 
     border-bottom: 4px solid #00ff41; /* La barre lumineuse en bas */
-    
-    /* On s'assure qu'il n'y a pas d'arrondi ni d'ombre inutile */
-    border-radius: 0;
+    border-radius: 4px 4px 0px 0px;
     box-shadow: none;
     font-weight: normal; 
 }
@@ -150,7 +146,6 @@ nav ul .active {
     color: white; 
     font-size: 0.7rem;
     text-align: right;
-    margin: 0;
 }
 
 
@@ -165,8 +160,8 @@ nav ul .active {
 
 /* 2. Le bouton visible (FR) */
 .lang-selected {
-    background-color: #50eb65; /* Le vert pomme/jaune de ton image */
-    color: #1a1a1a;            /* Texte sombre pour le contraste */
+    background-color: #00ff41;
+    color: #1a1a1a;           
     padding: 5px 12px;
     display: flex;
     align-items: center;
@@ -190,16 +185,15 @@ nav ul .active {
     border-radius: 2px;
 }
 
-/* 3. La liste déroulante (cachée par défaut) */
+/* 3. La liste déroulante cachée */
 .lang-list {
     position: absolute;
     top: 110%;
     left: 0;
     width: 100%;
     
-    /* On utilise le vert du bouton par défaut */
-    background-color: #50eb65; 
-    border: none; /* On enlève la bordure noire/verte */
+    
+    background-color: #00ff41; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -210,22 +204,17 @@ nav ul .active {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
-    
-    /* Empêche le hover noir de dépasser des coins penchés */
-    overflow: hidden; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .lang-list li a img {
-    width: 18px;      /* Taille fixe et petite pour le drapeau */
-    height: 12px;     /* Ratio drapeau standard */
+    width: 18px;     
+    height: 12px;     
     object-fit: cover; /* Coupe proprement l'image si elle est trop grande */
     border-radius: 1px;
     display: block;   /* Évite les décalages de ligne de texte */
-    transform: none;  /* L'image est déjà redressée par le <a>, pas besoin de plus */
+    transform: none;  
 }
 
-/* 4. LES INTERACTIONS (Hover) */
 
 /* Affiche la liste quand on survole le parent */
 .lang-list li a {
@@ -236,7 +225,6 @@ font-weight: bold;
     transform: skew(15deg); /* Redresse tout le bloc interne */
 }
 
-/* 4. LES INTERACTIONS (Hover) */
 
 .lang-dropdown:hover .lang-list {
     opacity: 1;
@@ -270,22 +258,21 @@ font-weight: bold;
 
 main{
     width: 100%;
-    /* On enlève justify-content: center ici pour ne pas écraser les sections */
     display: block;
 }
 
 
 
 section{
-    height: 100vh;           /* Chaque section prend 100% de la hauteur de l'écran */
+    height: 100vh;         
     width: 100%;
     display: flex;           /* Flexbox pour chaque page individuellement */
-    flex-direction: column;  /* Aligne le contenu du haut vers le bas */
+    flex-direction: column;  
     justify-content: space-between; /* Pousse la flèche tout en bas et le texte au milieu */
-    align-items: center;     /* Centre horizontalement */
+    align-items: center;   
     text-align: center;
-    padding-top: 100px;      /* Espace pour ton menu fixe (ajuste selon ton header) */
-    padding-bottom: 20px;    /* Espace pour que la flèche ne touche pas le bord */
+    padding-top: 100px;      
+    padding-bottom: 20px;    
     box-sizing: border-box;  /* Important pour que le padding ne casse pas les 100vh */
     scroll-snap-align: start;    /* Chaque section se cale pile au bord de l'écran */
     scroll-snap-align: start;    /* La section se "colle" au haut de l'écran */
@@ -295,9 +282,6 @@ section{
     padding-top: 100px; /* La hauteur de ton header */
     box-sizing: border-box; /* Indispensable pour que le padding soit INCLUS dans les 100vh */
 }
-
-
-
 
 
 
@@ -446,11 +430,10 @@ section{
 
 .skills-section {
     width: 100%;
-    min-height: 100vh; /* Garde le min-height */
-    height: auto;      /* FORCE la hauteur à s'adapter au contenu */
+    min-height: 100vh; 
+    height: auto;     
     background-color: #0a0a0a;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(15, 73, 7));
-    padding: 60px 0 100px 0; /* Un gros padding en bas pour respirer */
+    padding: 60px 0 100px 0; 
     
     /* On s'assure que rien ne déborde visuellement */
     overflow: hidden; 
@@ -584,6 +567,7 @@ section{
     background: #0a0a0a;
     min-height: 100vh;
     height: auto;
+     background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 255, 65));
 }
 
 /* Menu de filtrage */
