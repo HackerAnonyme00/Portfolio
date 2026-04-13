@@ -14,7 +14,6 @@ html {
 
 
 body{
-    background-color: rgb(255, 255, 255);
     font-family: 'Courier New', 'Courier New', Courier, monospace;
     overflow-x: hidden;
     margin: 0;
@@ -40,7 +39,7 @@ body{
 
 .navigation:hover{
     background-color:#00000086;
-    box-shadow: 0 5px 10px rgb(73, 204, 73) ; /* Ombre légère sous la barre (effet de relief) */
+    box-shadow: 0 5px 10px rgb(0, 255, 65) ; /* Ombre légère sous la barre (effet de relief) */
     transition: 0.5s;
 }
 
@@ -129,7 +128,7 @@ margin-left: 5px;
     width: 100%;
     height: 0;
     /* Couleur du "rideau" au survol : vert très discret */
-    background-color: rgba(0, 255, 64, 0.829); 
+    background-color: rgba(0, 255, 65, 0.829); 
     z-index: -1;
     transition: height 0.2s ease-in-out;
 }
@@ -140,15 +139,10 @@ margin-left: 5px;
 }
 
 /* --- L'ÉTAT ACTIF (STYLE DE L'IMAGE) --- */
-/* On cible le lien qui a la classe .active */
 nav ul .active {
-    background-color: rgba(0, 255, 64, 0.336); /* Le rectangle vert transparent */
+    background-color: rgba(0, 255, 65, 0.336); /* Le rectangle vert transparent */
     border-bottom: 4px solid #00ff41; /* La barre lumineuse en bas */
-    
-    /* On s'assure qu'il n'y a pas d'arrondi ni d'ombre inutile */
-    border-radius: 0;
-    box-shadow: none;
-    font-weight: normal; 
+    border-radius: 4px 4px 0px 0px;
 }
 
 .menu-item p {
@@ -171,8 +165,8 @@ nav ul .active {
 
 /* 2. Le bouton visible (FR) */
 .lang-selected {
-    background-color: #50eb65; /* Le vert pomme/jaune de ton image */
-    color: #1a1a1a;            /* Texte sombre pour le contraste */
+    background-color: #00ff41; 
+    color: #1a1a1a;           
     padding: 5px 12px;
     display: flex;
     align-items: center;
@@ -192,7 +186,6 @@ nav ul .active {
 
 .lang-selected img {
     width: 20px;
-    height: auto;
     border-radius: 2px;
 }
 
@@ -204,8 +197,7 @@ nav ul .active {
     width: 100%;
     
     /* On utilise le vert du bouton par défaut */
-    background-color: #50eb65; 
-    border: none; /* On enlève la bordure noire/verte */
+    background-color: #00ff41; 
     list-style: none;
     padding: 0;
     margin: 0;
