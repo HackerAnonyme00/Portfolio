@@ -38,7 +38,7 @@ body{
 }
 
 .navigation:hover{
-    background-color:000000;
+    background-color:#000000;
     box-shadow: 0 5px 10px rgb(0, 255, 65) ; /* Ombre légère sous la barre (effet de relief) */
     transition: 0.5s;
 }
