@@ -438,7 +438,7 @@ footer {
 
 .carousel-container {
     display: flex;
-    max-width: 1500px;
+    max-width: 2300px;
     margin: 0 auto;
     gap: 40px;
     height: 550px; /* Hauteur de la fenêtre d'affichage */
