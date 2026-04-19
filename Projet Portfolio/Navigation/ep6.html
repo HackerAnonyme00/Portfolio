@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ep1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Navigation/doc/pp2.png" >
+    <title> Expériences | Portfolio </title>
+</head>
+<body>
+
+    <header>
+        <nav class="navigation">
+            <div class="identity">
+                <a href=https://hackeranonyme00.github.io/Portfolio/index.html">
+                    <img src="doc/pp2.png" alt="PhotoProfile" class="pp">_./MAKAÏA</img>
+                </a> 
+            </div>
+            
+            <ul class="menu-item">
+                <li><p>0001</p><a href="https://hackeranonyme00.github.io/Portfolio/index.html">~/Accueil</a></li>
+                <li><p>0010</p><a href="https://hackeranonyme00.github.io/Portfolio/index.html #a-propos">~/A-propos</a></li>
+                <li><p>0011</p><a href="Competences.html">~/Compétences</a></li>
+                <li class="active"><p>0100</p><a href="Réalisations.html">~/Expériences</a></li>
+                <li><p>0101</p><a href="Contact.html">~/Contact</a></li>
+
+                <div class="lang-dropdown">
+                    <div class="lang-selected">
+                        <img src="https://media.cdnws.com/_i/4335/290/359/92/drapeau-france-2.png" alt="FR">
+                        <span>FR</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="lang-list">
+                        <li>
+                            <a href="#">
+                                <img src="https://www.larousse.fr/encyclopedie/data/images/1009498-Drapeau_du_Royaume-Uni_de_Grande-Bretagne_et_dIrlande_du_Nord.jpg" alt="EN">
+                                <span>EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+<main>
+
+
+<section class="project-detail">
+    <div class="project-container">
+        
+        <!-- Côté Gauche : Titre stylisé -->
+        <div class="project-sidebar">
+            <h1 class="vertical-title">CYBER<span>06</span></h1>
+        </div>
+
+        <!-- Centre : Infos et Outils -->
+        <div class="project-main">
+            <div class="project-header">
+                <span class="category-tag">01_Audits de sécurité</span>
+                <h2> IUT Villetaneuse</h2>
+                <p class="project-text">
+Dans le cadre de cette SAE, j'ai conçu et configuré une infrastructure réseau en Classe C, allant de la définition du schéma d'adressage à la mise en place de services critiques comme DHCP et Telnet. J'ai assuré la communication entre les différents segments réseau en déployant des solutions de routage statique et dynamique (RIP, OSPF). Ce projet m'a permis de valider des compétences concrètes en administration réseau, notamment dans la gestion des interfaces, la sécurisation des accès et la vérification de la connectivité via des tests de communication rigoureux.
+                </p>
+            </div>
+
+            <!-- La partie "Roster" devient "Stack Technique" -->
+            <div class="stack-section">
+                <span class="section-label">02_OUTILS UTILISÉS <i class="fa-solid fa-arrow-right"></i></span>
+                <div class="tool-grid">
+                    <div class="tool-item">
+                        <span>GNS3 </span>
+                    </div>
+                    <div class="tool-item">
+                      
+                    </div>
+                    <div class="tool-item">
+                      
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton Rapport -->
+            <div class="project-footer">
+                <a href="fichiers/rapport-audit.pdf" class="btn-report" target="_blank">
+                    <i class="fa-solid fa-file-pdf"></i> CONSULTER LE RAPPORT D'EXPLOITATION
+                </a>
+            </div>
+        </div>
+
+       
+    </div>
+
+<section class="cyber-gallery-carousel">
+    <div class="carousel-container">
+        
+        <div class="carousel-sidebar">
+            <h2 class="vertical-title">_DOCS.<span class="glow-text">EXE</span></h2>
+        </div>
+
+        <div class="carousel-main">
+            <div class="carousel-nav">
+                <button class="nav-arrow up" onclick="moveGalleryCarousel(-1)"><i class="fa-solid fa-angle-up"></i></button>
+                <button class="nav-arrow down" onclick="moveGalleryCarousel(1)"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+
+            <div class="carousel-window">
+                <div class="carousel-track" id="galleryTrack">
+                    
+                   <a href="ep1.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://imgng.societe.com/img/logo-societe-og-1200.png" alt="Aperçu Societe.com">
+                            </div> 
+                        <div class="item-description">
+                            <span class="step-num">01_Administrateur Système</span>
+                            <h4>Societe.com</h4>
+                            <p>Stage : Chez Société.com, j'ai sécurisé et administré des serveurs en déployant une application de cartographie via Docker, tout en isolant les flux critiques pour garantir l'intégrité du système.</p>
+                        </div>
+                        <div class="scan-line"></div>
+                    </div>
+ </a>
+                    
+                        <div class="carousel-item active-scan">
+                            <div class="item-visual">
+                                <img src="https://www.nolme.com/wp-content/uploads/2017/10/logo_230.png" alt="Aperçu Nolme">
+                            </div>
+                            <div class="item-description">
+                                <span class="step-num">02_Technicien supersion Windows</span>
+                                <h4>Nolme Informatique</h4>
+                                <p>Stage : Chez Nolmë Informatique, j'ai automatisé la maintenance de parcs Windows via Datto RMM et des scripts PowerShell, optimisant ainsi la gestion à distance et la mise à jour sécurisée des infrastructures logicielles et matérielles.</p>
+                            </div>
+                            <div class="scan-line"></div>
+                        </div>
+                   
+
+                   <a href="ep3.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://pyralink.co.uk/assets/uploads/media-uploader/pentest1736441160.jpg" alt="Aperçu Metasploit Shell">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">03_Pentester</span>
+                            <h4>IUT Villetaneuse</h4>
+                            <p> SAE : Audit de sécurité d'une infrastructure réseau virtuel, J'ai mené des tests d'intrusion (pentesting) via Nessus et Metasploit pour identifier des vulnérabilités système et préconiser des solutions de renforcement de la sécurité informatique.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                    
+
+                     <a href="ep4.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://static.vitrine.ynov.com/var/site/storage/images/4/0/9/1/31904-1-fre-FR/1026a2665af8-metier-developpeur-web-ynov.jpg" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">04_Développeur Web</span>
+                            <h4>IUT Villetaneuse</h4>
+                            <p> Projet : J'ai conçu un portfolio professionnel comme un outil stratégique d'identité numérique, visant à prouver mes compétences par l'exemple et à optimiser ma visibilité auprès du réseau professionnel.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+     <a href="ep5.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://s3.ap-south-1.amazonaws.com/webasha-blog/uploads/images/202502/image_750x415_67bc513475663.webp" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">05_Audits de sécurité</span>
+                            <h4>IUT Villetaneuse</h4>
+                            <p> Projet : J'ai conduit un audit technique ciblant des vulnérabilités critiques et l'exposition de données sensibles, afin d'évaluer et de hiérarchiser les risques de sécurité.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+     <a href="ep6.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://docs.gns3.com/img/getting-started/what-is-gns3/1.jpg" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">06_Sécuriser un système d'information</span>
+                            <h4>IUT Villetaneuse</h4>
+                            <p> SAE : J'ai conçu et configuré une infrastructure réseau (Classe C) en gérant l'adressage, le routage et les services (DHCP, Telnet), tout en validant la connectivité inter-VLAN par des tests de communication.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+                    
+
+
+
+     <a href="ep7.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">07_</span>
+                            <h4></h4>
+                            <p> </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+                    
+
+     <a href="ep8.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">08_</span>
+                            <h4></h4>
+                            <p> </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+     <a href="ep9.html">
+                    <div class="carousel-item">
+                        <div class="item-visual">
+                            <img src="https://www.nolme.com/wp-content/uploads/2017/10/logo_230.png" alt="Aperçu Burp Suite Proxy">
+                         <div class="scan-line"></div></div>
+                        <div class="item-description">
+                            <span class="step-num">09_</span>
+                            <h4></h4>
+                            <p> </p>
+                        </div>
+                    </div>
+                </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</main>
+
+<section class="image-gallery-full">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIREBUSEhIVFhUXFxgXFRgVFhYVGhUVFxcXFhcVFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lICUtLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLi0tLf/AABEIAKgBLAMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAQMEBQYHAAj/xAA9EAACAQIFAwIFAQYEBQUBAAABAgADEQQFEiExBkFRImETMnGBkbEHFCNCodEVUsHwM3KCkvFiY7LC4UP/xAAcAQACAwEBAQEAAAAAAAAAAAABAgMEBQAGBwj/xAAyEQACAQMDAgQDCQADAQAAAAAAAQIDBBESITEFQRMiUWFxgaEGFDJCkbHB0fAV4fFS/9oADAMBAAIRAxEAPwCAZ7g8IgTCMCYQmm6Xzf4Y0G9ydt/0mfeW+t6kaVpcaVpZ0RcZ6VsefMwXT3eTcU9kM4vN6dMEObNa9v7GNC3lN+XgWVeMV5uSr6YzxK1WoNP0byBLN5aypwTIba4U5MvP8Spm/qH5lPwZrsWvFi+5ketkSrRKqt3vcW/1mr09yhPLexRu8SjhLc5zWw7L8ykdvv4noIzi+GZelrkZMkOQJhGQJhGQJjDAmEYEwjGp6dyaliafrpnj5lJFjfvMy7uZ0ZeV/ItUoKS3GOp+mDQ0tSVmS3qPNj/4kllfqrlTeGdUpaeDLmaZEgTCMgbRhkafpzNqlKpSXdhq0hdhbVt/rzMy7t4VIyfDxyTwk1g6BmWVGrScU206gSVPm230mBRuFTmtazjuWXHK2OOY4OrGm/KsRvz9PpPY09LSlHuVfYiGShEMIw9VwbqgdhYMbC/Jt3tFjVjKWlDEfRfjfzHz6hQBjBBMIwkYIk4IJhCJCMJOOEhGEhCenHG+M8ueDBM4YExgoOi5B9PJ2/8AEEknySRbXBp8uzhqYAYksPSAdtvN+0zqtupPbg0qVw488kfqvHJUAIY6htbnY+/cSSypShlY2FuqsZY33KjAZxUorZOdxf2lqpbxqPzEFOvKC2Lzp7GLU+e5YAnni29zKd1TlHjguW9RS55IOP6iOuy3IB7yalZrTliTud9ipx+LVhYXsTqt7nz5lulTcXlkUpplcZYQiBMIyBMYYEwjAmEYEwjGn6Qz5KH8JwdLMNx2PkzNv7SVXzx5SLNCqo7M6P8AvNGupRSDcH8cTz2ipSepmhmMlgw+K6NoK5BeoL3sLbD7zbh1Oq45wis6EUzG5ll70X0MN+1vE2KNaNSOpEDi08Eb93a4BFr777beZLrWMhwbrJsuekfWocFV01FFwQe1/Mw7itGf4Xjfgswi0b7LNJTb7/UTArZUtyzEp+o+kaWJJe1mO50gXJ+su2fUp0Vp7CypplDQ/Z0pU69jbax+Xfv5Npel1pp+UVUgaH7OwKp39AIsObjvv5jS603D3Cqe5ZZl0MtZVW9lXVYXudwO/wBpVo9WlTbfdjOBmcH0FV11FBtY6Rfa4PeadTrENMWKoFF1N0jiMGA9QBla92W5Cnw395fsupUbluMdmvXuBxaM4ZpHCGEIJhCJCMJOCIYQiTgknC4BqnBUHwxsT9JHOtGHISKykEgixGx+slTysoJvTPLnghDCMCYQkrK1vVWR1n5GT0fxo21Hp1qx+I72SxuAPUe/PaY8rxU1pitzYjaup5pPYg4for4zF1dtPhhvzxfuJPLqXhrS1uRx6freU9hM/wCnKSsotpJ5KfTuvaG2vJtPv8Q17WCaM5XwfwFdlcNuU25tNCNTxGk17lRw8NNp+xTsJbRCCYQoEwjAmMMCYRkCYRkCYwyBMIwJhCWWV57Vw/yEfeV61pTrfiJoVXHg3mR9UpUpAVSNfe+wv4mFc2EoTehbF2nWTW5PrYDD121Pa44t4PO8hjWrUliJJpjLkpM46fqVMSj0gpS1mJtwNrAS7b3kIUnGeckcqbctjVZLgmRCjnUL2APZewmXcVVKWqOxPBNIt0pgcCU3Jkg4KdouoIRQGDLOCWkINRwvw52QiigObQa2cRsyy5K9NqdRbqwIYeQZLRrSpTU4vdHNZOR/tA6H/d2Wphk/hkBSt7nX5F9zcfpPXdK6t4ycaz39fYilHHBhMThXpmzoV+otN2FSM/wvIowZIEQwhEtCE2/RvRnx7Vqvyg/L/m9jMPqPVPCzThz6jokdR5fTwakiltcadO9geQbyOzrTuXhyOMhjs2LVA6dh3HP1mxStkoaZBGqmKp1GL1FJYnfSQB+I6pzgtMXsE15nnTwIhhGBMIUO4ZTqB4sw38QSe2CSC3ydhywB8Om+rbcjvPKVfLUZ6yl5qaLGkukWkDeWTpYRBzjC02psXtxydvpvJqFScZLSRVoRcXk5Tn2FVPSOfm5uG956e2m5bswK8VHZFEZdKwMIyBMYZAmEZAmEZAmEYExhgTCFAmEYQxhgb2hGRpOnc1ZqiI7cWAPn6zOu7dKDkkWac8tJnVstohUA7dp5WtLMi/FbE0JIcjhoIGcOiIE8FnZOHVEVhPETjhbwHCTjiPisKr21AGxuL9j5ksKko8HGM/aF0yMTQui/xEuVIG5t/L95tdJv3QqYk/KxJLJxGpTKkgggjkHtPbpprKIx3DLTNtV73+xESbn2Ci7xeT0fhCpSLFj/AC+JSp3VXXpnx6jmt/Z5mNcEUXHosT6tiT3ImR1ehSx4keQo0nUuVtWwtRAVuw2NuJm2dwqVeMvQY4pmmUVcOSKi23sD59x7T21C5p1lmDAWWR4LDtSvV+Jq1H5Rtba0rXNWtGeIYwEvjMc8EFRpF2CjliAPqYJSUU2xopyaS7mtp9AuyKfigN3BFx9iJmPqsVJrTsbEekycU9W4OJ6Fq0hqFVWAFzYGGHVIT2wdLpc4b6jYZfiadGgqg/KBce5//ZlVYTqVG33NalOEKaS7EI9XUDcE6SPPf6Sb/j6nYi+/0+5jess7asyqhIQC+x2Y+Zr2FsqabfJmXtw6jSXBnSWIJLA7b3O9pf2TxgqZbWckYyQAJjDIEwjAmEYExhkCYRkIYQoEwjIExhkCYRgTCMiTl9Eu40mxG8jqyUY7kkN3sdk6fWoKahmB23nj7pwcnhGnTzgvFMpNEoRaDBwSNeBoIoxCatOoavBNj+O8h8WGrRlZ9O/6DYeMjlSoFBZjYDk+PeGUlFZfBxT4zGstc6GBBRGsTdWuXGxHHy8j+s8/1PqVSzuYSjvCS3XwfKfz+BNTpqUX6kulmaOjkelkUsytyLC9/ce42++01be+o3FJ1Kb459V8SOUHF4YeW4z4i2PzrbUPrww9jY/g+JH02+jeUFNc8Nej/r0DUhpeCUZokZFr8yWJxznrboU16nxaFgx+YHg/2npOm9XVKOirx2EcTEYzpSth3UVLWPj+om3T6jTrRekXGC9y2gXKgA2BtcAG3i/mUK01FNsZGvydGQBawFxsrDuD+gmRcNSeYDIu6yAi36SlFtPISizPpqniCpceobA+B7jgy9Rvp0U1Hg4mYLp2nTQKNP8A2iQ1L2c5Z/kJkMuyerWGsL6AdyTa/wBJoVbiFN4fJ4ijbTqLUlsa7pzpRaTmtVINjemAeB5b+0y7q+c1oh8zZs+nKnJ1J/I1tNiw22EzGkuTWTclsODZfUeOTF5ew/C3OU47qFjXci2i5Fh3UE2npqdpFU0u55md43Ub7FBWe5J95eisLBTby8gu5PJ9oUkhstjZjhQJhCCYRgTCMIYRgTGCgTCMgTCMgTCMgTGGQJhGRb9M0tdZVK7E7nTqH0MqXktMG8k9Hd4OiVumKQQNTpqG7m3j2nn431TViT2L7orGxJyGq/FVNLDb2IkdzGP5HlDU2+5oEMoMmFtAEJmVBdmAHkkAfkxJTSWWFIpsyr06lRdJDXUhrAldt13tbu39J4/7RSt6qhUpzi5LbZpvHPb0f7luhqWU0NU9S/I7AHYrfUpHjS2wH0tMm36zd0dtWpekt/rz9SSVKLBo0Qu9hqIAY2sWt5/J/MzpTctuyzhemfQcWpTDWuOOJ0Kk4Z0trKw8enoc1kJKpputQfy7MPKH5vxYMP8Al95pdHvvutws/hls/wCH8v2yJVhqiXlLGowuGFtWnf8AzXsAPrsR7ET6BCrCa1J7Za+aeP3KTTQtYyeICHWrADc2k0YvOwCozGhSqga7G3EuUZ1Kb8pwxgMFTo3NgF8R6tWdTC7nDuPw3xFBU7Df6e0WlU0Np8nB4FhtvvbeCqmEl1/l/WQx5OJiLtIWwjeWZHTSkFUllvqH3E6rcylPL2Zm0LSEaaSeVyWmEwuldP3P3lac8vJbp09KwSLSMkKnP6DPRZAGIPOnm3iWraSjNSKtzFypuJz7qXA0QR8JCjgC68X7Xt55m7aVan53lGFd0qa/AsMzTCaCZQBMYZAmEYEwhBMIyBMIwhjDCrSJBIF7QOSXIyTYVTDHQGAPe/8AecprVgfTtkjGSHIExhgTCMFSoM17DjcwOajyOlk6J0HldMIW5JN9xa1trCYHU683LBoW0FjJuRxMTuXQHAMKOFDW7TsZCP0pHIJXZpVotxdnHBpgMR7EkhbexMwOrVenVI6LiSyuMbyX6fzsT0lUW8SDSJKjUADbcA3APsZ4OSSb08F0OA49OOPTjj044jYjTT/ieGQnc2FmUXA4BsAL+wmr0qrUldUaOXp1p47ZZHUS0t+xYtm9K3zifUfu1T0M/KKfPsdoXUoLqeQP97S5a0tTw3hgbKGjmyFt9Sgb777+LS/K2kltuDI+/UVNRceo8WAtYfeIrKbfoHJc5TjVeiX1C3Pj8ylXpSjUUcDIhYbFfEdlQGw5Pv7SedPRFOTOL3A1NS78iUKsdLCSRXXzI9LONBTpgCw4me3kCSSwgrQBImYYtaKF24HMlp03UlpRFVqKnHUzO43qtOEUt5+kv07GX5ngzqnUI/lWTG53mZeqKqgAE299jxNW3oqMNLMm4ruU9aK7N6yuwNrN3/EsUIuKIa0lJlcZYIgTCMCYQiGEYExhgTCE0vStSklN2dbtfx+hmdeqcpJRexftXFJtjmZ4umwuqqtvPEWjTmuXkec4vgzmIqpv6VN+42sZowjL1KzaIREmACwjIY0PTWHpMzb78Wbv32MoXk5xSLVFRZucpqootwV2I9+ZiV4yk8+pfptIsqmIYm68SuoRXJJljWKxTJY6Sb7bC9veNCmpZWTnJotKO4BlWXJIh4PaLjIxU5sqgak2cmwA4bzqHYAb6hv9eD5/rdjZ+DKtUWmXZrlvsvf+u5PRnPOEMMwBAvzsPfa/6AzwWC6BVxCqQCRckLbk3bjb7H8GMoSfCOFqVlVlUndrhR5sLn+gnKEmm0tlycORTj044gZ6pOHqAc227XsQf9JqdEqQp9RoTqPEVJZI6qbg8HNcRmjCxB/M/QUKCZkZHT1K+nTfjuDzF+4wznAdRWPnPPe/MtK2OyRv8TN78DxJfAWA5LbL+q2p02phF08m973+3Mp1enKclJt5GUhzB9WFagKeldrqbfexgqdO1Q827GybLKs3qVX1WspG3v7iY1e2hTjjuNktMTi9LWlSFPKCby8wcAyJqhwdkq83xNPSUc2v7SxQhLOYlW4qQxpkY/GYBVouKPffUDuT/oJqwqtzTn+hkToqNNqH6mLqgg2Paa8cPdGO8rZjbGMg5BMIQTCMCYwRDCMgTCMgTCEVarAWBIE7SnyOpNAVD73jIbI2YwUCYRkCYRi5wePRaerSNQI47ypUpSlLGdixGaSNDkebCpUAce1zKFzbuEdi1SqanuainjF1AFrXmY6csZSLSkhzFV7W727+YIRyFsk0sWPzInTHUha+NAG5nRpNhcimzOstmY1G42swXSvc358nmZ/UekK5i5uOqSWIpvEU33/l5zxsPTraduw49cegkWaxfT3tax/qwH3nzOnQnPUob7pZ+L2NVLI2uHGoNZi1wSdDD1b8FgL2uqj2m5cWWm30w3eEvrv+o+Nh+rRIdSy73uW2t8tQaB32vf3vILu3jb2ehctrPxFfAzWqEuhuygMABZgHBBFybWI32H38Sv8AcPDtZVJrzbY9t19TtOxNvMkUruoKlD4JTEVFRKnoBY2GogkWJ2BFrj6TQ6XG8VzGpZxcpw82Ipt4XOy3xvh+zEnp04lwzjeYKyVGRiNSkgkcG3cex5H1n6NsLmF1bQrwWFJZw+U+6funs/dGLKLjJpkUmXUAAxhkIZwR/A1VVwWF14MSrFyjtyMh1qlM1C3bsIqU1HAxoMJ1ENIA9Om9u8z6llu3zkbJ7/H2bfWZ33NLbAcn0EZ89OG3a0ZIVsynV1V9Pp+3m80rKMc7mV1CUsbGGTMqqXUn88ibLowluYSr1I7EPE1NRuee8lgsLBHKWXkYMkAIYRgTCMCYQiGEYEwjAmEIMYZAmEYEwjAmEYExhkJCMiZRzN1WwkUqEZPJKqjQX+L1L8wfd4DeIzV9LZzqUhzsNheZd7bYacS3RqZW5bV8xpuvzWIlSNGcXwTOaaKOpn9gykg+JeVpumiPxSNSxikqahvT1XIG/G+kfU7byl1e3uJ2k6VrHzyWnnGE+W37LPvkloTippz4Ra5T1A2IrEpTW63WmrNbUWSo1mexsL0hwDbfmeDrfZ+XR6lJVJ6nNSzhbLS48d3zzt8DWtrlVm8Lg1WCq1SP4tNUNv5X1qT3sSAfyojFsLG0yV9IBYG4DGwPbc+P97yOdOM8alw8nIhMmKJ9fwSmxsgcMpBBG5JDD7LI7yk6tGUI8s4jVVejUY2BLj7tUGhUUeFu5H+zMe6sMeHCPql+7b/3oBr0Mz1xmtN6H7vUBDvSWtTbtrUm6HxcAi/G/wCfQfY3p11G+V5RWY056JrvpksavdLl99s49KV3OOlwfdZXyOb2n24yhDCEEwjAmEYQwhEMIQYRhdR8zsIJ9Ykz5KMxtxGQrKfN8Hr2BG2+8tUKmndlO4patkZHNcgUqXB9d999jNSjdNPD4MivZxxqXJlq62NrcTSi87mZLbYYMcAhhCCYRgTCEQwjIExhgTCFAmEYEwjCGEZAmMFA2hGQjIfBnJocAxggkRhkS8uxAQ7mRVYaiWEsD+LzDf0RIUdvMO5+hVl9yTeWsbbAyEMUQukHaDw03ljKRIyPFiniqLMbIKilrjUNw1MG3ewqN+Zkdds41rOc1HMorZ90sxcv1UfoXLGrorRWdn/TS/c7PUdQFJbRvwSBfYi39b/afNUs8Hoz373T/wA6/wDcI2mXoLlepHXG0q6Oabo4Rij+k1NLi11ZRuCLj8wSi1ygxafBluo89p2ZKfNMEBkBChiPW4PewBUAdyb7DeGTWUlu+xNGD5fBgc4zb95ShdbPTQo3gi4Kkfa4+0+mfZ7oUukzrx1aozcZL1Tw9Sfz4foeduLhVmnjHJVGemIEIYRgTCEEwjCGEIJhCJGGEnBPq6q4AvPk6WQyeNzOt1ACG42Nh7y990xgzPvyeTLZhnTCoW1H38TSp2yccGVVu5KWckZs9LqQx3kitlF7CffHJblfRofHcBVNzyffzJ5S8OOWyCEfFlhITMcrakoYnY7Q0q6m8INW3dNZZXSwQgmcMgTGChIRkCYRkSRltUrqCEiR+NBPDZKqU2s4I1aiymzC0ljJS4A01yNERgiBSeIcjIfwuAaoQFteJOqoLLJYQctkbnpnJ1GzUgSB82xmLeXLfEjTt6S7oucTkdOoCCot9JUhdThumWHRjIyWM6DfWdDjT2vNWn1aOnzLcqOzedmQcy6Mq01BQ6j37Sej1OE3h7CztZRWxmK1JkYg8iaUZKSyiDGBomOg5AMYKBMIyBYXhGN30x1uoCUsUxVqe9OuAD202qAg72a17G/Jta88B1jo8rStGdtupt4ik20+ce6/Y3rW6VaDVTt3/wB3N3/jgKaxjF0nhgaO/wB7WmE7iotmvoXFbwfBlM/zb+DX/dwU1B3qVfleo+i1x3GyqNR3sABbYyvrdSaXLbSL1O20wcnthM5tWxhYva+ll0BewHY288/me5svsxCNChKe1SM1OXw50/Lb559TErdScpzUfwtYX9kQz2RloEzhhDGGBMIQTCMIYQoEwjCGEIkIT6ZzmofhkDk+J8voJatyrcyeh4MV+7G7MASQdh2mvrWyMLw3ly5M9iWux+svQWxnTe4xHFLHJ8cKZN5BXpa1sW7asoPcDNsyNaw4Udo1Giqe/c6vXdTbsVplggBMIwJhCP4XBvUvoF4s6kYcksKcp8F1gekazMNYsveU6nUKaXl5LtOxqN+Y2mGwoRQvYcTInPU8mvGGlYIeY5DTrnUR+NpNSup01hEdS3jN5ZDHSVK5uLyX/kJkas4kHEdNojal29ud5PG9lJYYjtoxeUWWD6fA9Q5PJtK9S7fBPC3XJc4HCfBS0p1KniPJZhDQhz95AG8GhvgbVgcp4gEXIsIrg87BUiLisUhFgeZLCnJPIrkjnHU9C1/SOeZ6GzlnuZ9ZGXZZppkABjBFpUmdgiKWZjZVUFix8ADcxZ1IU4uU3hLuPFOTwjXZf+zPHVF1P8Kl7OxZvuEBA/Mxav2goReIRcvov5f0LsbOb5eCLm3Row7or1HvYfEOgD1d1Rd7jj1At3uBMe4+0t0m/DhH25bX13/2xoW1hbyeKs2v5/onZdRCotOmjOVFhZfUQOPmsTPJThVqzc3y3l/F8noldW9KKipcbdy6pdOYmupU0iqsCDq2axFvlNv1ktO0mmpZxggqdSptNKLf0/sq8T+yistImnWD1ANlZVQN7XDGx957ej9pKmqPiQWO7Wc/Ff19TzkrZflZz/GYSpRqNTqoyOvzKwsR/ce42M9TQr060NdN5X+/QrNOLwyOZMcIYRgTCEEwjCGEIJhGEMIQYQnf8ZnQANvvPncLf1MereLDwZzE5wGUqt1vL8LdxeXuZk7tSTS2KJxvLiKDBjHHlE5jIFoUEELfiHIyLLL8kqVHAZSoIve0gqXMYrKZapW05yw1gmt0pVJslj7nYASFX8MZZY+4VM4RsciyJMPTAO7dz7zKubqVWWexsW1rGlHHcuaarxcSo2y2khutTHiNFgaAC7Q5AL8P3nag4GamHDWvGU2uBXFMJ8QqbGcoOQXJIX4ykQaWg6kyDiau9gJPCJHJkXGYoadzaSU6bzsLKWxR4rOqSbKCx9he31l6FtOW72IHWiuDKZxnPxgBp47zUoW3h75K06uopby6RpgG0Ix1b9lWSpSw5xbj+JVLBCRutJTp28amBPuNM8f1q6dWv4aflj+/f+jWtKajDV3ZvpjlsF6SnlQfqAYMI4VVA2AA+m0Jws449OOKrqHpzDY5NFencj5XHpdP+Vh+nB7iWLa6q289dKWH9H8V3FlFSWGcJ6v6dfL8SaDNrUqHpva2pCSNxwGBUg29j3nuumX6vKWrGGtmv5XsylUhoeCkM0hUCYwUCZwwhjBBMIyEMIQZwx0hsWbEdiZ5JQR4bxXwRjJBBDCEEwhEhCJCE23TGTL8IMSLnc/2mRd3D14RvWVtHRlmnpYcDiZ0ptmnGCRKRQBI28kyWCNjHNrLJKaXcjm3wiJhqAo3dmJJ33Ow+klnN1PKkRwiqfmZRZp1mASqLuLi58y7R6c8ZkynV6is4ij2WZ3icQAqU+PmbtadVtqNLeTDSuatXZIvcOKzfN6ZSl4ceNy7HW+SxWmZX1E+CNjMAHU9j5klOq4sSdPKKs0/gC7MSB3MtZ8V4SIcaOWDh8atU3UgiGdOUNmdGalwZ/qLEk+lBcjcy/awS3kV60s7Iz64wCmwNg9/HIl/w25prggU9vcoqnMvIhH8symvi6nwsOFNSxb1sFFgQDa/J3vb2Mo9Qv1aU84zJ8enzLdpbqtPEnhLn1+Rq8H+ySszIa+ITSf+Jo1agO6obAG/nt4M8nV6hdVJanUa+G37HoYq0pwcYUs+73/3wOkYjCqtOklKyqjU6YUcBVemxH2WmR95UbbeWQlrOOEnHCIwIuODxOC1h4FM4B4HaccQs6xHw8NVccimxH1tYRJvEWye2hrrRj7o55+1nACphcJiE3sSpN7+mogf9af9Z6L7N19NaUHxKP1X/TZUvYNNr0bOVspntEyiAYwQTCMIYQgmEYEwjCQhN/PKnghIQiGEIk4IkIQqSgkXnN7DxWWbPJ8eiKEBmTXpSk8s3LetGK0o0uErgyhOLRp05pnsVjlQG54ghScuAzqxjyUWadQoq3U3PaXaNpJvDKVa8illGUzLOatY2uQDtYTTpW0KaM2rczqMlZV0y71BrHp5P9pHWvYxj5eSejZylJauDo2Ewi01CoAAJgTqObyzdhBQWEP2iZJBGa0KR2Rl60dRF1DGKw61FKsNjzHhNweULKKksMrBkwpr6Tt2Es/eXN7kPgqK2M5nIdgadNSD5tz95oW+lPVJlarl7RMdUwVXWU0knuOZrqrDTqyUtMs4GGwVQGxU38WjqrDGch0sPL8XUw1ZKyX1Kw27m5Hpt33tt3tKXVKMK1tLU0tO6b7Y/vgtWcpRqpRWc7YO95ZjVr0Uqrw4vY8qe6n3BuD9J4qMlJZRuyi4txfKEroPiU7clize4VGW5+7KIRSVOOGcdUK0nYchGI+oUmCTwmPSWZxT9UNZO18PRP8A7af/ABEEPwoe4WKs/i/3HcZTZkOhtLDdT2uOzDuDxb9DYwvghI2BxfxFVOHAHxR/kI7f9RvY9xczk8o4pusc2Kq2GRAxamWck20J5Hk7fpIK0/yo1OnW2Wq0njDwvdmWx1KviMuXDr/xGAfD3O1Rab3amL8VANduxDW8EXOk3UaFxTlU43/Rpr6A6rbKbnOn2xqXv6/P9zl9Um5ve4NiCLEEbEEHg+0+mQcXFOPDPMjRkgUCYRkIYRgTCEEwjCQhN/PLHghIQiTgiQhEIhGDpW7wMeOB8VeLHiJpJlIusL1JpABG8qTs8vYvU77C3KvMs3eqTvYeJZpW8YIr1bmVRkClTZzYAmTuSjyRRTlwb3J+nEFNCwuR6j9ZiV7yWp4N63s46Vk01JAOJnttmikkOXi4GyNvUtGSA2RqtaSRiI5DXxI2AZJFNojQ6Ec32nLY4j1sGG7SSNRoVwTIq5VSpnUAB5J/1kruJyWGxVSinsM4pKY2UB3bgLbjyT/Kvv8Ai52kNS7VKOZP5EtO3dR4iiJh+nUFX4r6WbSRpC2C37qSfm7X/SZF51Ktcw8N7R9P7NK2tYUJa4/i9RcizI4Su1BwzU2OoaQWNPbdyB/IRa/g/UyGylNt00slq/hBxVbOHx8TWiorVVYMCvw2IINwQzJvfx6ZeMslIwIBBuDuD5E44HEU9SMvlSPyLQNZQ0JaZJlL0Zi9eFCH56RNNh4sdv6foZFQlmOPQu9Rp6azkuJbovZMUCrxKGnVV0t6mVGB/mQt+q3JB9z5kS8ssB7EDP8AplsRXFanV0Np0kFb35H6G1otSi5SymaNrfxo0/DlHKzkrUpYbC1letimrVKYstNFuE2taw2X6EiRvRTeZyJZV6txBwpU8J8v1+ZQdVZHh8bVWtQuj1kNQqy21EafXtcG4YXsdiN+Z6fo/VZU14b3j29jCr0d/cwGbZJVw7WdeeCN56+hdU6yzFlRxaAw+UO9NqhsgH+ba/0jSuYxkorf4BS2K1hLKCCYQgmEYSEJvjPLHgxJwT0IRLTshR5kI5EKaY2GgYThLwjZBMIRUG4vOfA0eTdZFllMAMpG/JmNcVp7pm9a0IJJo1agAWEzHuaq2CtAMBVawvGisgbwV9WvcydRIXIbNURtIuo8GnYCmP03iNDpkilvI3sSIfURGOjM5njtdVjYtSoMpIX1a2vURyV76GXjyGPYTNvK7b8Ncdy/a0UlrfyDw1AIEZSKdR+Qw/4lrmzgfzAd+R78SgXCRhsW9VAadM73GptkFja4JsXXa4IFiLbi8tUrSpPfhf7sV6lxCHuS6WHWkpJNyd3drXa3F/A32HAvNelTjTWmJnVKkpvLCyrBB3aoNqRA9PaowJOu3Gnf/qIvwBeOs05bBgnge6lzoYWlcDVUY2pr5Pcn2H9pVq1NC9y/Z2vjzw9kuWYfG1MYq/vDYjdWAZVqXNNjcgMg2Xg7SpJz/Fk3KStm/CjDZrnHPz5ZocjcpmLjj41FarL4chSf6lvzJ6bxU+KM65SlaJ//ADJr5f7BrpZMgqM2xBUq4RnCuLqgubWIvb6kSFy82RsbFFnWNr4igWT4irbWAv8ADUoBch3cqzAi/Fh7Rp06s47bD0akYTTksoi5fkSlQWuBYEADT/Q7j7gTHUPU253faKJmW4NaetFHDckkko3qUXPAF2AHGxnounyTorHK2ZhXSfiN+u5Kq4FGG4v9ZoRqyXBXwRMVkVGooVkBHjtJoXdWDymDSjI9QdCIVvh/S19wTsR4mtadXknirwRyp+hlq/SWIRQSBc8jxNWPUaMngXQzRZH0rSNMGol273mdc9QmptQexJGI5mHTqF9kpgAWte3EWleyUd2wuJFkZ8/EnHHlG84ZFhTxSAAAWt35JMhcJPctRqxSwkNY+uXsY1OOkFWercgsJMiEGEIhEIR7CUQzgHiLOWFsS04pySZs8vUUlsN1G8yaj1vfk26SVNbcFvgsfrFxx7yrUpaeS5TrauCw+PtINJY1DGIrgi0eMcMWU8lZWqSzFFdsbVozQEx5HiNEiY4K1oNI2ofp4wAgRHTHUyataQ6SXUZejk7s4Sp6aK2LWJvWJ+YAg3CEhWYML3Jsd7yjCxfiOU9/5Ls7xaFGP/hZ4zK6T6d3Wx3sxOpSLMnqJsD7byw7Om8bdyFXM13J1TEgDuewA5JPCgeZO1pWWQrfgm4TL9w9UBm7LytP6eW/9X4tverObkTRjgmVEP8AK1re1wfYj+1ogxiOqcwVMwQuCVSnbbfSzarOAeSLqftKlWSVTc3bGjKVo1Hlv9UsbFJSwi0SorVVai7BmFJg7OFvpuP5fmPJ7yFRUeXsXpVHVT8OLUltvsln9zWdP5fXfFtjKq6VdSEW/qA2Cgjt6RLNOMnPWzJu61KNBW8Hlp7vt7/U1MsGUU+cDSukN6qh0L5BbkjzZdTf9MiVPMkg52IubC1IU0AuxCKt7C3LAmxsNIbtLNzNRpPPwOoR1TR6nXBsO5XVbnbbuNjyJhmmewS6qlRu3pQe+kEk/l7f9JmvYJqm36soXTzJImFZeyVxi0kAMVUjpnEHE4ANueJPCq4gwep0gFsOfPj6TnJt5CY/NciZqpb4tTf3mxQu1GCWlCNDuGyl2J8CVZ14o8TTtZyY9WyVtOofjvEjcLOCSVm8ZREfLKm9hxJVWiRO2nvsRalIjbvJFLJE4tbHvhNbjidqQyi8DTCOhQTCES04KLLKUYEkC9hIKzWMMuW6ecotcNmTn0aPrK0qMV5slyFeT8uC4yui/eyjsJVrSj2LtCMu+xOqVLbSFIsOWBlqm8fAmoaq2jROYGqMAU1IMByCzXhSwHIRewnYyNk9RzEE2B3nSovGQxqrglGtI9JJk98Sdg7I3hsUyYgEBGBT0Brj1XOuzbgEqVtsdg3G8pXjlHD7Fihjc0uCxy1b2uGHzK3I9/ce42lVST4JyTCcUue9NUsUwdiyuBbUttx4IMiqUVPcu2t/Ut1pW6GMp6QoUGDm9RhxrtYHyAO/1iwoRi8klfqdWrHStl7Ghk5nHpxxneodV/iablGUUluBclhqJPYte3sB7kQU3mqsHP8ACZvNa1YBmKVCXQ09Y/8A56mGshFJ0DSBY+V3Pcw16FzLzSXyW+C3SqUY+VP5jz5olRh8F1uzpTAFrrRp2eqxB+W4JH00kTPcXHaRaW/BZZXidNIDe12K350sxZSxO5axF77+d56S3oyVKKlzgyKs05tonpiwZK6bQmQviiDSwgPUEZI4jE32MkOENOdk4jtSEkUjhMvw5VBfYW/rI6sk5GBQptR3JXw9uBvI8k+nYh40U6Qu1rntJaeqb2IKvh01mRQHF0mckJY9vr9Jd0TSw2Zni0pSyokbEYOoxJA5+0kjUgtiOdKpJ5IFSiwNiJMpJ8EDg1swDTjZOwKlPfcznIaMSywGLCgrwL895XqU29y5RqpLBYNjwGJ0jtv3Mh8JtYLPjJPOC0wWKJFztK1SGHguUqjayPl7xMYJM5HBRMGodRG6lGMpAcSFUJVpMt0Rt4YYqCDDGTFJgwMQcbmSpsZPTouRFOqohZVh2Y6iLX3+0FaaSwPSi3uXDpKqZZweFI2g1IKRArUHYgXsQbqw7EcH/fIuI9SMJwcX3BFyjLKMn+0zrWtg1wwoH4eI1l2NrjQgAI3+ZHLD/tINiJh+DKnNpmhGakso3n7PeuqOa0biyV0H8Wlfj/1p/mQ+e3B92Ca2ccenHHpxwjmwJgbwjjOZ1U3pr5csfoqn/wCxSNZR1Vc+gKrxEiF5sYK+SLiqCP8AOit/zKDx9YdEXyg6muBt6kmSFyAMVbvD4Z2QxjD5g8IbIYxV+8Hh4DkNKw8xXFhyO/vSgfMIvhyfYOSvqZqlzvLCt5YBqP/Z" alt="Description 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEgyxD4rRC8JJ-LHHYI_JL5Qc3hRansuIMug&s" alt="Description 2">
+    <img src="ton-image-3.jpg" alt="Description 3">
+    <img src="ton-image-4.jpg" alt="Description 4">
+</section>
+
+
+<footer>
+    <p>2026, Tous Droits Réservés © • Anonyme Hacker</p>
+</footer>
+
+<script>
+    // 1. Variables globales
+    let galleryOffset = 0;
+    const itemFullHeight = 230; // Hauteur de l'item + gap
+    const galleryTrack = document.getElementById('galleryTrack');
+    const totalGalleryItems = galleryTrack.children.length;
+    const visibleGalleryItems = 2; // Nombre d'images visibles simultanément
+    const galleryWindow = document.querySelector('.carousel-window');
+
+    // 2. Fonction de déplacement
+    function moveGalleryCarousel(direction) {
+        const maxGalleryScroll = (totalGalleryItems - visibleGalleryItems) * itemFullHeight;
+
+        if (direction === 1) { // Descendre
+            if (galleryOffset < maxGalleryScroll) {
+                galleryOffset += itemFullHeight;
+            }
+        } else if (direction === -1) { // Monter
+            if (galleryOffset > 0) {
+                galleryOffset -= itemFullHeight;
+            }
+        }
+
+        // Applique la translation verticale
+        galleryTrack.style.transform = `translateY(-${galleryOffset}px)`;
+    }
+
+    // 3. Gestion de la molette (Wheel)
+    galleryWindow.addEventListener('wheel', (e) => {
+        // Empêche le scroll de la page principale
+        e.preventDefault();
+        
+        if (e.deltaY > 0) {
+            moveGalleryCarousel(1);  // Molette bas
+        } else {
+            moveGalleryCarousel(-1); // Molette haut
+        }
+    }, { passive: false });
+
+    // 4. Support Tactile (Mobile)
+    let touchStartY = 0;
+    galleryWindow.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    galleryWindow.addEventListener('touchend', (e) => {
+        let touchEndY = e.changedTouches[0].clientY;
+        // Seuil de 50px pour éviter les déclenchements accidentels
+        if (touchStartY > touchEndY + 50) {
+            moveGalleryCarousel(1);  // Swipe vers le haut
+        } else if (touchStartY < touchEndY - 50) {
+            moveGalleryCarousel(-1); // Swipe vers le bas
+        }
+    }, { passive: true });
+</script>
+
+    
+
+
+
+
+</body>
+</html>
