@@ -381,8 +381,9 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centre le texte verticalement dans cet espace */
-    align-items: start;
+    align-items: flex-start;
     z-index: 2;
+    width: auto;
 }
 
 .bonjour {
@@ -409,7 +410,7 @@ section{
     margin: 10px 0;
     white-space: nowrap;
     text-align: center;
-    item-align:center;
+    width: 100vw;
 }
 
 
