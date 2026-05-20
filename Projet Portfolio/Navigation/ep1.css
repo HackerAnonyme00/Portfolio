@@ -737,3 +737,197 @@ footer {
     margin: 0;                /* Pas de marges pour qu'elles soient collées */
     padding: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- SECTION GLOBALE (Intégrée à ton Portfolio) --- */
+.certif-section {
+    background-color: #0a0a0a; /* Ton fond noir de référence */
+    padding: 100px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace; /* Ta police Terminal */
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+/* --- ZONE TITRE (Mise en page de la photo, Couleurs de ta DA) --- */
+.section-title-container {
+    width: 100%;
+    max-width: 850px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.section-title {
+    color: #ffffff; /* Blanc pur */
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Pour matcher ton style de gros titres h2 */
+}
+
+/* Décorations géométriques version Matrix */
+.decorations {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+}
+.dot-matrix {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #00ff41; /* Vert Matrix */
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 0 8px #00ff41;
+}
+.circle-matrix {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00ff41;
+    border-radius: 50%;
+}
+
+/* --- CONTENEUR DES CARTES MASSIFS --- */
+.accordion-container {
+    width: 100%;
+    max-width: 850px;
+}
+
+.accordion-item {
+    background-color: #111111; /* Fond de boîte très sombre */
+    margin-bottom: 16px;
+    border-radius: 8px; /* Arrondis de ton image */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Cache la checkbox de contrôle */
+.accordion-toggle {
+    display: none;
+}
+
+/* --- EN-TÊTE DU BLOC (Bandeau plein comme ton image, mais vert/noir) --- */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 255, 65, 0.15); /* Vert très transparent pour faire un fond plein discret */
+    padding: 22px 30px;
+    color: #ffffff; /* Texte blanc */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    user-select: none;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+/* Effet Hover de la ligne complète */
+.accordion-header:hover {
+    background-color: rgba(0, 255, 65, 0.3); /* S'illumine au survol */
+    color: #00ff41; /* Le texte devient vert fluo */
+}
+
+.job-date {
+    margin-left: auto;
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+/* Le symbole + / - */
+.accordion-icon::before {
+    content: "+";
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* --- CONTENU DE LA CARTE --- */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+}
+
+.accordion-body {
+    padding: 30px;
+    color: #ffffff;
+    text-align: left;
+    background-color: #0d0d0d;
+}
+
+/* Liens et Méta */
+.job-meta {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+.meta-location i, .meta-link i {
+    color: #00ff41; /* Vos icônes passent au vert */
+    margin-right: 6px;
+}
+
+/* Description */
+.job-description {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* --- BADGES EN PILULES (Structure de l'image, couleur Hacker) --- */
+.job-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: #00ff41; /* Fond plein vert Matrix */
+    color: #000000;            /* Écriture noire pour un max de contraste */
+    padding: 6px 16px;
+    border-radius: 20px;       /* Forme pilule exacte de ton image */
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+/* --- LOGIQUE D'OUVERTURE --- */
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 600px;
+}
+
+/* Style de la ligne quand elle est ouverte */
+.accordion-toggle:checked ~ .accordion-header {
+    background-color: rgba(0, 255, 65, 0.25);
+    color: #00ff41;
+    border-bottom: 2px solid #00ff41; /* Rappel de ta ligne lumineuse */
+}
+
+.accordion-toggle:checked ~ .accordion-header .accordion-icon::before {
+    content: "—";
+}
+
+
+
+
+
+
