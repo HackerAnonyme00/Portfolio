@@ -380,24 +380,26 @@ section{
     flex-grow: 1;           /* Prend tout l'espace disponible au milieu */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre le texte verticalement dans cet espace */
-    align-items: flex-start;
+    justify-content: center; /* Centre le texte verticalement */
+    align-items: center;     /* MODIFICATION : Centre globalement les éléments enfants */
     z-index: 2;
-    width: auto;
+    width: 90%;              /* Donnez une largeur max pour éviter qu'il colle aux bords de l'écran */
+    max-width: 1200px;
+    margin: 0 auto;          /* Centre le bloc sur la page */
 }
 
 .bonjour {
-    width: 30%; /* Ou la largeur que tu souhaites */
-    align-items: flex-start; /* Aligne le contenu à gauche */
-    border: 2px solid #00ff41; /* Bordure un peu plus fine pour plus de style */
-    font-size: 1.2rem;         /* Taille réduite pour le contraste avec le nom */
+    align-self: flex-start;  /* NOUVEAU : Aligne UNIQUEMENT le "Bonjour" à gauche */
+    margin-left: 5%;         /* NOUVEAU : Décale légèrement du bord gauche pour l'esthétique */
+    border: 2px solid #00ff41; 
+    font-size: 1.2rem;         
     color: #00ff41;
     padding: 5px 10px;
     text-transform: uppercase;
-    background: rgb(0, 0, 0); /* Léger fond vert transparent */
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* Effet biseauté optionnel */
+    background: rgb(0, 0, 0); 
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); 
+    width: auto;             /* MODIFICATION : "auto" évite que le cadre ne s'étire inutilement à 30% */
 }
-
 /* Ajout de l'emoji via CSS */
 .bonjour::before {
     margin-right: 10px;
