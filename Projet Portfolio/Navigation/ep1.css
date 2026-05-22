@@ -751,7 +751,7 @@ footer {
 
 /* --- SECTION GLOBALE (Intégrée à ton Portfolio) --- */
 .certif-section {
-    background-color: #0a0a0a; /* Ton fond noir de référence */
+    background-color: #000000; 
     padding: 100px 40px;
     min-height: 100vh;
     display: flex;
