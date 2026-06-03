@@ -931,3 +931,44 @@ footer {
 
 
 
+
+
+
+.fleche {
+   padding-bottom: 30px; /* Colle la flèche en bas de l'écran */
+   
+}
+
+
+
+.btn-fleche-up, .btn-flech-down{
+    text-decoration: none;
+    color: #00ff41;
+    font-size: 1.4rem;
+    padding: 10px;
+    border: white 2px solid;
+    background-color: rgba(27, 22, 22, 0.589)
+    
+    
+}
+
+
+.btn-fleche-up:hover, .btn-flech-down:hover {
+    text-shadow: 0 0 10px #00ff41;
+    transform: scale(1.05);
+    transition: height 0.4s ;
+}
+
+.fleche code {
+    border-right: 2px solid #00ff41;
+    animation: blink 1s step-end infinite;
+    padding: 5px 10px;
+}
+
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+
