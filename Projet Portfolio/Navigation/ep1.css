@@ -934,41 +934,60 @@ footer {
 
 
 
+/* --- POSITIONNEMENT DES BOUTONS DE NAVIGATION DE PAGE --- */
+
+/* Conteneur de la flèche : on le force à se mettre en bas au centre de sa section parente */
 .fleche {
-   padding-bottom: 30px; /* Colle la flèche en bas de l'écran */
-   
+    position: absolute;
+    bottom: 30px;      /* Aligné à 30px du bas de la section */
+    left: 50%;         /* Début du bloc au centre horizontal */
+    transform: translateX(-50%); /* Décale de sa propre moitié pour un centrage parfait */
+    text-align: center;
+    z-index: 100;      /* Reste au-dessus du contenu sans gêner */
+    width: 100%;       /* Permet de bien calculer le centrage */
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* Évite de bloquer les clics de souris aux alentours */
 }
 
-
-
-.btn-fleche-up, .btn-flech-down{
+/* Style des boutons style Terminal (On réunit les sélecteurs pour éviter les fautes de frappe) */
+.btn-fleche-up, .btn-flech-down {
+    pointer-events: auto; /* Réactive le clic uniquement sur le bouton */
     text-decoration: none;
     color: #00ff41;
-    font-size: 1.4rem;
-    padding: 10px;
-    border: white 2px solid;
-    background-color: rgba(27, 22, 22, 0.589)
-    
-    
+    font-size: 1.1rem;      /* Légèrement réduit pour un look "invite de commande" plus réaliste */
+    padding: 12px 24px;
+    border: #00ff41 1px solid; /* Bordure verte Matrix plutôt que blanche pour matcher ta DA */
+    background-color: rgba(5, 5, 5, 0.85); /* Fond noir opaque pour masquer le contenu derrière */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
-
+/* Effets au survol */
 .btn-fleche-up:hover, .btn-flech-down:hover {
     text-shadow: 0 0 10px #00ff41;
-    transform: scale(1.05);
-    transition: height 0.4s ;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+    background-color: #00ff41;
+    color: #000000; /* Inversion des couleurs au survol (effet Terminal rétro) */
 }
 
+/* Animation du curseur qui clignote */
 .fleche code {
+    font-family: 'Courier New', monospace;
     border-right: 2px solid #00ff41;
     animation: blink 1s step-end infinite;
-    padding: 5px 10px;
 }
-
 
 @keyframes blink {
     50% { border-color: transparent; }
 }
 
+/* --- AJUSTEMENTS DE SÉCURITÉ SUR LES SECTIONS PARENTES --- */
+
+/* Nécessaire pour que position: absolute de .fleche fonctionne par rapport à la section */
+.project-detail, .certif-section {
+    position: relative; 
+    padding-bottom: 120px; /* Ajoute un espace de sécurité en bas pour ne jamais chevaucher le texte */
+}
 
 
