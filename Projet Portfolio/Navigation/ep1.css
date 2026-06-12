@@ -934,7 +934,6 @@ footer {
 
 
 
-/* --- POSITIONNEMENT DES BOUTONS DE NAVIGATION DE PAGE --- */
 
 /* Conteneur de la flèche : on le force à se mettre en bas au centre de sa section parente */
 .fleche {
@@ -950,25 +949,25 @@ footer {
     pointer-events: none; /* Évite de bloquer les clics de souris aux alentours */
 }
 
-/* Style des boutons style Terminal */
-.btn-fleche-up, .btn-fleche-down {
+/* Style des boutons style Terminal (On réunit les sélecteurs pour éviter les fautes de frappe) */
+.btn-fleche-up, .btn-flech-down {
     pointer-events: auto; /* Réactive le clic uniquement sur le bouton */
     text-decoration: none;
     color: #00ff41;
-    font-size: 1.1rem;      
+    font-size: 1.1rem;      /* Légèrement réduit pour un look "invite de commande" plus réaliste */
     padding: 12px 24px;
-    border: #00ff41 1px solid; 
-    background-color: rgba(5, 5, 5, 0.85); 
+    border: #00ff41 1px solid; /* Bordure verte Matrix plutôt que blanche pour matcher ta DA */
+    background-color: rgba(5, 5, 5, 0.85); /* Fond noir opaque pour masquer le contenu derrière */
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
 }
 
 /* Effets au survol */
-.btn-fleche-up:hover, .btn-fleche-down:hover {
+.btn-fleche-up:hover, .btn-flech-down:hover {
     text-shadow: 0 0 10px #00ff41;
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
     background-color: #00ff41;
-    color: #000000; 
+    color: #000000; /* Inversion des couleurs au survol (effet Terminal rétro) */
 }
 
 /* Animation du curseur qui clignote */
